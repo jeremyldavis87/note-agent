@@ -1,0 +1,159 @@
+{
+  "image_metadata": {
+    "total_notes_detected": 9,
+    "detection_method": "visual_analysis",
+    "background_color": "terracotta/rust",
+    "note_arrangement": "3x3_grid"
+  },
+  "notes": [
+    {
+      "position": "row_1_col_1",
+      "note_color": "orange",
+      "qr_code_present": true,
+      "qr_code_position": "bottom_right",
+      "title": null,
+      "raw_text": "Reach out to swish.ai",
+      "formatted_text": "Reach out to swish.ai",
+      "action_items": ["Contact swish.ai"],
+      "tags": ["action", "outreach"],
+      "confidence_score": 0.95,
+      "processing_method": "vision_llm"
+    },
+    {
+      "position": "row_1_col_2",
+      "note_color": "green",
+      "qr_code_present": true,
+      "qr_code_position": "bottom_right",
+      "title": "Chargebacks",
+      "raw_text": "Chargebacks\n↳ Develop cost model\n  - Fixed + variable\n↳ Gateway & infrastructure\n↳ Tools",
+      "formatted_text": "Chargebacks\n• Develop cost model (Fixed + variable)\n• Gateway + infrastructure\n• Tools",
+      "action_items": [
+        "Develop cost model",
+        "Address gateway and infrastructure",
+        "Define tools"
+      ],
+      "tags": ["gateway", "chargebacks", "cost-model", "infrastructure"],
+      "confidence_score": 0.92,
+      "processing_method": "vision_llm"
+    },
+    {
+      "position": "row_1_col_3",
+      "note_color": "blue",
+      "qr_code_present": true,
+      "qr_code_position": "bottom_right",
+      "title": "Tech teams touchpoint",
+      "header": "ROCKETBOOK",
+      "raw_text": "ROCKETBOOK\nTech teams touchpoint\n↳ HZI# teams\n↳ JD teams\n↳ Mike teams\n↳ Steve teams\n↳ Mukesh teams",
+      "formatted_text": "Tech teams touchpoint\n• HIH teams\n• JD teams\n• Mike teams\n• Steve teams\n• Mukesh teams",
+      "action_items": ["Create a tech team touchpoint with JD teams, Mike teams, Steve teams, and Mukesh teams"],
+      "tags": ["touchpoint", "teams", "coordination"],
+      "confidence_score": 0.93,
+      "processing_method": "vision_llm"
+    },
+    {
+      "position": "row_2_col_1",
+      "note_color": "orange",
+      "qr_code_present": true,
+      "qr_code_position": "bottom_right",
+      "title": "Fine-Tuning Strategy",
+      "raw_text": "##Fine-Tuning Strategy##\n☐ Get guidance from Legal + Regulatory\n☐ Give access to HIH team\n☐ Discuss w/ EMG team",
+      "formatted_text": "##Fine-Tuning Strategy##\n☐ Get guidance from Legal + Regulatory\n☐ Give access to HIH team\n☐ Discuss w/ EMG team",
+      "action_items": [
+        "Get guidance from Legal + Regulatory",
+        "Give access to HZI# team",
+        "Discuss with EMG team"
+      ],
+      "tags": ["strategy", "fine-tuning", "legal", "regulatory"],
+      "checkboxes": 3,
+      "confidence_score": 0.90,
+      "processing_method": "vision_llm"
+    },
+    {
+      "position": "row_2_col_2",
+      "note_color": "green",
+      "qr_code_present": true,
+      "qr_code_position": "bottom_right",
+      "title": "LiteLLM",
+      "raw_text": "LiteLLM\n↳ Multi AZ\n↳ Multi Region\n↳ Active/Active approach + cost model",
+      "formatted_text": "LiteLLM\n• Multi AZ\n• Multi Region\n• Active/Active approach + cost model",
+      "action_items": [
+        "Implement Multi AZ",
+        "Implement Multi Region",
+        "Define Active/Active approach and cost model"
+      ],
+      "tags": ["architecture", "multi-az", "multi-region", "active-active"],
+      "confidence_score": 0.94,
+      "processing_method": "vision_llm"
+    },
+    {
+      "position": "row_2_col_3",
+      "note_color": "blue",
+      "qr_code_present": true,
+      "qr_code_position": "bottom_right",
+      "title": null,
+      "raw_text": "- Mainframe region start up code/config\n→ Drives a lot downstream",
+      "formatted_text": "• Mainframe region start up code/config\n→ Drives a lot downstream",
+      "action_items": [],
+      "tags": ["mainframe"],
+      "confidence_score": 0.88,
+      "processing_method": "vision_llm"
+    },
+    {
+      "position": "row_3_col_1",
+      "note_color": "orange",
+      "qr_code_present": true,
+      "qr_code_position": "bottom_right",
+      "title": "PIF Followup",
+      "raw_text": "##PIF Followup##\n1. Anthropic\n2. UnifyApps\n3. Fastino\n4. Snowglobe/Guardrailsai\n5. NotDiamond\n6. TinyFish",
+      "formatted_text": "##PIF Followup##\n1. Anthropic\n2. UnityApps\n3. Fastino\n4. Snowglobe/Guardrailsar\n5. WebDiamond\n6. TinyFish",
+      "action_items": [
+        "Follow up with Anthropic",
+        "Follow up with UnityApps",
+        "Follow up with Fastino",
+        "Follow up with Snowglobe/Guardrailsar",
+        "Follow up with WebDiamond",
+        "Follow up with TinyFish"
+      ],
+      "tags": ["vendors", "pif"],
+      "confidence_score": 0.91,
+      "processing_method": "vision_llm"
+    },
+    {
+      "position": "row_3_col_2",
+      "note_color": "green",
+      "qr_code_present": true,
+      "qr_code_position": "bottom_right",
+      "title": "Embedding Model Governance",
+      "raw_text": "##Embedding Model Governance##\n• Meet w/ Kelly Smith\n• Set direction for enterprise\n• Document current process",
+      "formatted_text": "##Embedding Model Governance##\n• Meet w/ Kelly Smith\n• Set direction for enterprise\n• Document current process",
+      "action_items": [
+        "Meet with Kelly Smith",
+        "Set direction for enterprise",
+        "Document current process"
+      ],
+      "tags": ["governance", "embedding-model", "documentation"],
+      "confidence_score": 0.93,
+      "processing_method": "vision_llm"
+    },
+    {
+      "position": "row_3_col_3",
+      "note_color": "blue",
+      "qr_code_present": true,
+      "qr_code_position": "bottom_right",
+      "title": null,
+      "raw_text": "Partner w/ our best sales reps + UWs\n→ How do you get around our systems/process",
+      "formatted_text": "Partner w/ our best sales reps + UWs\n→ How do you get around our systems/process",
+      "action_items": ["Partner with best sales reps and UWs", "Understand how to work around systems/process"],
+      "tags": ["sales", "partnership", "process-improvement"],
+      "confidence_score": 0.89,
+      "processing_method": "vision_llm"
+    }
+  ],
+  "summary": {
+    "total_action_items": 28,
+    "main_themes": ["infrastructure", "governance", "vendor_followup", "team_coordination", "architecture", "process_improvement"],
+    "note_colors_used": ["orange", "green", "blue"],
+    "all_qr_codes_present": true,
+    "notebook_brand": "Rocketbook"
+  }
+}
