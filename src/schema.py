@@ -8,7 +8,7 @@ class ImageMetadata(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
     total_notes_detected: int
-    detection_method: Literal["visual_analysis", "qr_grid", "grid_heuristic", "single_note"]
+    detection_method: Literal["visual_analysis", "qr_grid", "grid_heuristic", "single_note", "multiple_images"]
     background_color: Optional[str] = None
     note_arrangement: Optional[str] = None
 
@@ -20,6 +20,7 @@ class Note(BaseModel):
     note_color: Optional[str] = None
     qr_code_present: Optional[bool] = None
     qr_code_position: Optional[str] = None
+    qr_code_info: Optional[str] = None
 
     title: Optional[str] = None
     header: Optional[str] = None
