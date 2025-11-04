@@ -1,0 +1,312 @@
+{
+  "image_metadata": {
+    "total_pages": 2,
+    "date": "10/22/2025",
+    "notebook_brand": "Rocketbook",
+    "detection_method": "manual_transcription"
+  },
+  "pages": [
+    {
+      "page_number": 1,
+      "title": null,
+      "qr_code_present": true,
+      "qr_code_position": "bottom_left",
+      "sections": [
+        {
+          "section_title": "Clint 1-on-1",
+          "raw_text": "Clint [on-1]\n\u2022 WWT discir\n\u2022 Steps Forwa\n\u2022 Rationalizal\n\u2022 Coding assig\n\n\u2610 Formalize\n  in metal\n\nession\nard\nfion\ntant operating model\ne variables + thoughts ar\nn hyperscaler",
+          "action_items": [
+            "Formalize in metal",
+            "WWT discussion",
+            "Steps Forward",
+            "Rationalization",
+            "Coding assistant operating model"
+          ],
+          "tags": [
+            "meeting",
+            "1-on-1",
+            "Clint",
+            "WWT",
+            "operating model",
+            "hyperscaler"
+          ],
+          "checkboxes": 1
+        },
+        {
+          "section_title": "Alex Gornovoi 1-on-1",
+          "raw_text": "Alex Gornoue\n\u2022 Ready to ge\n\u2022 Looking at\n\noi |-on-|\nt into innovation\nNER effort w/ Tyler\n\nound neo-cloud, bare\n\n\u2192 Triples\n- working to\n\nmotivate himself",
+          "action_items": [
+            "Get into innovation",
+            "NER effort with Tyler",
+            "Neo-cloud, bare metal research",
+            "Triples - working to motivate himself"
+          ],
+          "tags": [
+            "meeting",
+            "1-on-1",
+            "Alex Gornovoi",
+            "innovation",
+            "NER",
+            "Tyler",
+            "neo-cloud",
+            "bare metal"
+          ],
+          "checkboxes": 0
+        },
+        {
+          "section_title": "Product Research",
+          "raw_text": "Product Res\n- HeyGen/Sy\n- ElevenLabs\n\nsearch\nAnthesia\ns",
+          "action_items": [
+            "Research HeyGen/Synthesia",
+            "Research ElevenLabs"
+          ],
+          "tags": [
+            "research",
+            "product",
+            "HeyGen",
+            "Synthesia",
+            "ElevenLabs"
+          ],
+          "checkboxes": 0
+        },
+        {
+          "section_title": "To Do",
+          "raw_text": "To Do\n\u2610 MacBooks\n\u2610 AI Job Pan\n\u2610 Patient Ex\n\u2610 Client E2E\n\ns.forthIH\naily roles\nperience Ideation\nE AI Ideation\n\nGlnhe Tray Fish Baking\n\n\u2610 Vendor con\n\u2610 Strategic P\n\u2610 LiteLLM\n\u2610 Schedule +\n\u2610 Contact Sw\n\u2610 Chargeback\n\u2610 Set up tim\n\u2610 Review qua\n\nneeds - NOT Diagramming, Not\ndan w/ Anthropic.\n\nech team touch points\nishriai\ns - AI Gateway cost model\nnew w/ Jenni echen\ndrails\n\n(i.e fixed vs variable)",
+          "action_items": [
+            "MacBooks",
+            "AI Job Panel - daily roles",
+            "Patient Experience Ideation",
+            "Client E2E AI Ideation",
+            "Vendor consolidation",
+            "Strategic Planning",
+            "LiteLLM",
+            "Schedule tech team touch points",
+            "Contact Swishtrial",
+            "Chargebacks - AI Gateway cost model (fixed vs variable)",
+            "Set up time",
+            "Review guardrails",
+            "Meeting with Jenni Chen"
+          ],
+          "tags": [
+            "todo",
+            "tasks",
+            "MacBooks",
+            "AI",
+            "patient experience",
+            "vendor",
+            "strategic planning",
+            "LiteLLM",
+            "Anthropic",
+            "chargebacks",
+            "gateway",
+            "guardrails"
+          ],
+          "checkboxes": 11
+        }
+      ]
+    },
+    {
+      "page_number": 2,
+      "title": null,
+      "qr_code_present": true,
+      "qr_code_position": "bottom_right",
+      "sections": [
+        {
+          "section_title": "Mukesh",
+          "raw_text": "Mukesh\n\u2022 Langsmith\n  \u279c Visibility\n  \u279c PII/PHI\n\u2022 GPU Hardware\n\n- No way to de-identify",
+          "action_items": [
+            "Review Langsmith visibility features",
+            "Address PII/PHI concerns",
+            "Investigate GPU hardware options",
+            "Find solution for de-identification"
+          ],
+          "tags": [
+            "privacy",
+            "langsmith",
+            "Langsmith",
+            "data-privacy",
+            "pii",
+            "de-identify",
+            "visibility",
+            "phi",
+            "de-identification",
+            "hardware",
+            "PII/PHI",
+            "Mukesh",
+            "gpu",
+            "Visibility",
+            "GPU Hardware"
+          ],
+          "checkboxes": 0
+        },
+        {
+          "section_title": "Alexis Powell 1-on-1",
+          "raw_text": "Alexis Powell /\n\u2022 Guardian AI\n\u2022 Unstructured\n\n-on-I\n\nio - has been a little Frustrat\n\nFollow up Next\nweek on goals\n\n\u2022 Likes working\n\u2022 Likes spicy foo\n\u2022 Advisor - Praue\n\nw/ Sarah\n\nLena Avaluru - MentorQlic -\n\ngoal setting",
+          "action_items": [
+            "Follow up next week on goals"
+          ],
+          "tags": [
+            "Alexis Powell",
+            "1-on-1",
+            "Guardian AI",
+            "Unstructured",
+            "Sarah",
+            "MentorQlic",
+            "Lena Avaluru",
+            "advisor",
+            "goal setting"
+          ],
+          "checkboxes": 0
+        },
+        {
+          "section_title": "Azure OpenAI Proposal",
+          "raw_text": "Azure OpenAI\n\u2022 Attendees\n  \u21a6 Erik Golden\n  \u21a6 Patti. Lukas\n  \u21a6 Will Redage\n\nProposal\n\n\u21a6 Heather Adler          \u21a6 Piyush Panc\nzewicz          \u21a6 Curkis Romboli\ncs          \u21a6 Mukesh Pandey",
+          "action_items": [
+            "Follow up with Erik Golden",
+            "Follow up with Patti Lukas",
+            "Follow up with Will Redage",
+            "Review proposal with Heather Adler",
+            "Review proposal with Piyush Pancerzewicz",
+            "Review proposal with Curtis Rombolics",
+            "Review proposal with Mukesh Pandey"
+          ],
+          "tags": [
+            "Azure OpenAI",
+            "Mukesh Pandey",
+            "Curkis Romboli",
+            "openai",
+            "Proposal",
+            "Will Redage",
+            "Piyush Panc",
+            "Patti Lukas",
+            "azure",
+            "proposal",
+            "attendees",
+            "Heather Adler",
+            "meeting",
+            "Erik Golden"
+          ],
+          "checkboxes": 0
+        },
+        {
+          "section_title": "CGI Nav!",
+          "raw_text": "CGI Navi\n\u2022 Jira API ac\n\u2022 Dogma app c\n\u2022 Aijaz for app\n\u2022 AZ11349\n\n\u21a6 Bradley\n  \u2022 Alison\ncess\n\u21a6 Ganesh\nConflict \u2192\n\nWyckhouse\n's offa",
+          "action_items": [
+            "Set up Jira API access",
+            "Configure Dogma app",
+            "Contact Aijaz for app",
+            "Follow up on AZ11349",
+            "Reach out to Bradley",
+            "Connect with Alison",
+            "Coordinate with Ganesh",
+            "Resolve conflict",
+            "Contact Wyckhouse's office"
+          ],
+          "tags": [
+            "AZ11349",
+            "Alison",
+            "Conflict",
+            "Aijaz",
+            "dogma",
+            "app",
+            "coordination",
+            "Bradley Wyckhouse",
+            "jira",
+            "api",
+            "CGI Nav",
+            "conflict-resolution",
+            "Ganesh",
+            "Jira API",
+            "Dogma app"
+          ],
+          "checkboxes": 0
+        },
+        {
+          "section_title": "Platform Priorities",
+          "raw_text": "Platform Priori\n\nroyal\n\nties\n\nde\n\n1/1 Readiness\n\u2022 LiteLLM\n\u2022 Web Apps\n\u2022 MCP Gateway\n\u2022 AgentCore E\n\u2022 Utilization &\n\u2022 Fine-tuning &\n\u2022 Sagemaker Por\n\u2022 News aggregatio\n\u2022 Prompt manag\n\u2022 Model routin\n\nenablement & AgenFic. frame w\nProjections\nSLM enablement\ndata scientists lists\non & distribution\nement - Pull out of code\ng\n\npork/formulary",
+          "action_items": [
+            "Complete LiteLLM readiness",
+            "Complete Web Apps readiness",
+            "Complete MCP Gateway readiness",
+            "Complete AgentCore readiness",
+            "Set up utilization tracking",
+            "Implement fine-tuning capabilities",
+            "Configure Sagemaker",
+            "Set up news aggregation and distribution",
+            "Implement prompt management",
+            "Pull prompt management out of code",
+            "Configure model routing",
+            "Enable SLM for data scientists",
+            "Develop agentic framework",
+            "Create projections and pork/formulary"
+          ],
+          "tags": [
+            "prompt-management",
+            "Web Apps",
+            "utilization",
+            "platform",
+            "web-apps",
+            "projections",
+            "1/1 Readiness",
+            "enablement",
+            "Utilization",
+            "priorities",
+            "agentic-framework",
+            "data-scientists",
+            "Prompt management",
+            "data scientists",
+            "Sagemaker",
+            "news-aggregation",
+            "News aggregation",
+            "readiness",
+            "AgentCore",
+            "Model routing",
+            "fine-tuning",
+            "MCP Gateway",
+            "SLM-enablement",
+            "Agentic framework",
+            "LiteLLM",
+            "SLM",
+            "MCP-gateway",
+            "Fine-tuning",
+            "model-routing",
+            "Platform Priorities"
+          ],
+          "checkboxes": 0
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "total_pages": 2,
+    "total_sections": 9,
+    "total_action_items": 59,
+    "total_checkboxes": 12,
+    "main_themes": [
+      "1 On 1",
+      "Agentic Framework",
+      "Enablement",
+      "Goal Setting",
+      "Innovation",
+      "Meeting"
+    ],
+    "key_people_mentioned": [
+      "Alex Gornovoi",
+      "Alexis Powell",
+      "Clint",
+      "Mukesh"
+    ],
+    "key_vendors_products": [
+      "Anthropic",
+      "Azure OpenAI",
+      "ElevenLabs",
+      "Guardian AI",
+      "HeyGen",
+      "Langsmith",
+      "LiteLLM",
+      "MCP Gateway",
+      "MentorQlic",
+      "Sagemaker"
+    ]
+  }
+}

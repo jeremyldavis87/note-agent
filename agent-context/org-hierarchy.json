@@ -1,0 +1,1672 @@
+{
+    "organization": "Cigna",
+    "ceo": {
+      "name": "David Cordani",
+      "title": "Chairman and Chief Executive Officer",
+      "employee_id": "103056",
+      "direct_reports": [
+        {
+          "name": "DP Koka",
+          "title": "EVP CIO",
+          "direct_reports": [
+            {
+              "name": "Tom Britt",
+              "title": "SVP Information Technology",
+              "direct_reports": [
+                {
+                  "name": "Ginny Elkins",
+                  "title": "Executive Assistant"
+                },
+                {
+                  "name": "David Erickson",
+                  "title": "Information Technology Managing Director"
+                },
+                {
+                  "name": "Jennifer Hesking",
+                  "title": "IT Project Management Managing Director"
+                },
+                {
+                  "name": "Poonam Nair",
+                  "title": "IT Strategy Managing Director"
+                },
+                {
+                  "name": "Jeff Sanders",
+                  "title": "IT Strategy Managing Director"
+                },
+                {
+                  "name": "Vijay Sankaran",
+                  "title": "VP Information Technology"
+                },
+                {
+                  "name": "John Srinivasan",
+                  "title": "Software Engineering Senior Director"
+                }
+              ]
+            },
+            {
+              "name": "Xiomara Anderson",
+              "title": "Senior Executive Assistant"
+            },
+            {
+              "name": "Pat Brown",
+              "title": "SVP Provider Solutions & Operations",
+              "direct_reports": [
+                {
+                  "name": "Antoinette Bonacci",
+                  "title": "Provider Relations Managing Director"
+                },
+                {
+                  "name": "Kimberly Brutnell",
+                  "title": "Operations Managing Director"
+                },
+                {
+                  "name": "Denise Burns",
+                  "title": "Operations Senior Director"
+                },
+                {
+                  "name": "Dylan Endery",
+                  "title": "VP Operations"
+                },
+                {
+                  "name": "Thomas Phillipotte",
+                  "title": "VP Operations"
+                },
+                {
+                  "name": "Kathy Benson",
+                  "title": "IT Strategy Principal"
+                },
+                {
+                  "name": "Amy Wright",
+                  "title": "Executive Assistant"
+                },
+                {
+                  "name": "Michelle Beauregard",
+                  "title": "Strategic Planning Director"
+                },
+                {
+                  "name": "Alyssa Avignon",
+                  "title": "Resource Planning Senior Director"
+                },
+                {
+                  "name": "Eileen Flynn",
+                  "title": "Program Management Senior Manager"
+                },
+                {
+                  "name": "Annette Kemplin",
+                  "title": "Agile Experience Owner Director"
+                },
+                {
+                  "name": "Karen Brackett",
+                  "title": "Executive Assistant"
+                },
+                {
+                  "name": "Jill Brough",
+                  "title": "Compliance Senior Representative"
+                },
+                {
+                  "name": "Mike Callahan",
+                  "title": "Operations Director"
+                },
+                {
+                  "name": "Parmis Green",
+                  "title": "Medical Director"
+                },
+                {
+                  "name": "Dietrich Kraveland",
+                  "title": "Network Operations Senior Director"
+                },
+                {
+                  "name": "Nikki Oganovic-Crawford",
+                  "title": "Operations Senior Director"
+                },
+                {
+                  "name": "Max Greenberg",
+                  "title": "Strategic Planning Director"
+                },
+                {
+                  "name": "Anthony Carducci",
+                  "title": "Operations Senior Director"
+                },
+                {
+                  "name": "James Johnson",
+                  "title": "Program Management Senior Manager"
+                },
+                {
+                  "name": "Suzanne Wynn",
+                  "title": "Network Operations Senior Director"
+                },
+                {
+                  "name": "April Gibson",
+                  "title": "Operations Senior Director"
+                },
+                {
+                  "name": "Justin Hansen",
+                  "title": "Provider Relations Director"
+                },
+                {
+                  "name": "Michelle Sullivan",
+                  "title": "Operations Senior Director"
+                },
+                {
+                  "name": "Rae Larick",
+                  "title": "Business Analytics Senior Manager"
+                },
+                {
+                  "name": "Demetria Wright",
+                  "title": "Operations Senior Director"
+                },
+                {
+                  "name": "Mary Catherine Kelly",
+                  "title": "Provider Relations Management Director"
+                },
+                {
+                  "name": "Jennifer Zerleik",
+                  "title": "Administrative Assistant Senior Representative"
+                },
+                {
+                  "name": "Jodie Mislendarski",
+                  "title": "Program Management Senior Manager"
+                },
+                {
+                  "name": "Kristin O'Brien",
+                  "title": "Business Project Senior Manager"
+                },
+                {
+                  "name": "Toni Turner",
+                  "title": "Program Management Manager"
+                },
+                {
+                  "name": "Adam Rudolph",
+                  "title": "Business Communications Senior Director"
+                },
+                {
+                  "name": "Heidi Vigil",
+                  "title": "Operations Senior Director"
+                },
+                {
+                  "name": "Stanley Steele",
+                  "title": "Agile Experience Owner Senior Director"
+                },
+                {
+                  "name": "Sharren Zellerholm",
+                  "title": "Program Management Manager"
+                },
+                {
+                  "name": "Shelly Stefanowicz",
+                  "title": "Provider Relations Director"
+                },
+                {
+                  "name": "Paul Williams",
+                  "title": "Operations Senior Director"
+                }
+              ]
+            },
+            {
+              "name": "Neal Chopdekar",
+              "title": "SVP Information Technology",
+              "direct_reports": [
+                {
+                  "name": "Prashanti Reddy Bodupalli",
+                  "title": "Scrum Master - VP"
+                },
+                {
+                  "name": "John Enama",
+                  "title": "Application Development Managing Director"
+                },
+                {
+                  "name": "Paul Handerlite",
+                  "title": "Application Development Managing Director"
+                },
+                {
+                  "name": "Ashly Huber",
+                  "title": "IT Project Management Managing Director"
+                },
+                {
+                  "name": "David Kanen",
+                  "title": "Corporate IT Managing Director"
+                },
+                {
+                  "name": "Jill Nicol",
+                  "title": "Architecture Director"
+                },
+                {
+                  "name": "Michele Quinn",
+                  "title": "Operations Managing Director"
+                },
+                {
+                  "name": "Don Reilly",
+                  "title": "IT Strategy Managing Director"
+                },
+                {
+                  "name": "Ashok Venkatachalam",
+                  "title": "Free Agent SM Director"
+                },
+                {
+                  "name": "Joe Jamison",
+                  "title": "Application Development Director"
+                },
+                {
+                  "name": "Kris Barnard",
+                  "title": "IT Project Management Director"
+                },
+                {
+                  "name": "Korey Ewing",
+                  "title": "Data Measurement & Reporting Senior Director"
+                },
+                {
+                  "name": "Caroline Angexine",
+                  "title": "Corporate Real Estate Senior Manager"
+                },
+                {
+                  "name": "Jasmine Balen",
+                  "title": "IT Strategy Senior Director"
+                },
+                {
+                  "name": "Karen Devaney",
+                  "title": "IT Project Management Director"
+                },
+                {
+                  "name": "Kyle Mitchell",
+                  "title": "IT Project Management Senior Director"
+                },
+                {
+                  "name": "Roger Grover",
+                  "title": "Application Development Director"
+                },
+                {
+                  "name": "Jennifer Garza",
+                  "title": "Administrative Executive Senior Representative"
+                },
+                {
+                  "name": "Mia Eckhaus",
+                  "title": "Corporate Real Estate Principal"
+                },
+                {
+                  "name": "Sandra Byrnes",
+                  "title": "Executive Assistant"
+                },
+                {
+                  "name": "Todd Heffner",
+                  "title": "Free Agent Sr Director"
+                },
+                {
+                  "name": "Tayler Smith",
+                  "title": "Infrastructure Engineering Senior Manager"
+                },
+                {
+                  "name": "Sanjeev Grover",
+                  "title": "Application Development Director"
+                },
+                {
+                  "name": "Dominic Orlando",
+                  "title": "Agile Experience Owner Senior Director"
+                },
+                {
+                  "name": "Josh Kurtz",
+                  "title": "Corporate Real Estate Principal"
+                },
+                {
+                  "name": "Sheila Deane",
+                  "title": "IT Strategy Principal"
+                },
+                {
+                  "name": "Declan O'Connell",
+                  "title": "Program Management Senior Director"
+                },
+                {
+                  "name": "Carey Loughran",
+                  "title": "Application Development Director"
+                },
+                {
+                  "name": "Nicholas Pettinelli",
+                  "title": "IT Strategy Senior Director"
+                },
+                {
+                  "name": "David Lauchner",
+                  "title": "Corporate Real Estate Senior Manager"
+                },
+                {
+                  "name": "Edna Gilligan",
+                  "title": "IT Project Management Director"
+                },
+                {
+                  "name": "Adam Sauerbrunn",
+                  "title": "Program Management Director"
+                },
+                {
+                  "name": "Nadia Sekander",
+                  "title": "Application Development Senior Manager"
+                },
+                {
+                  "name": "Cori Phillips",
+                  "title": "IT Project Management Senior Director"
+                },
+                {
+                  "name": "Kerry Luccarelli",
+                  "title": "Financing Analyst Lead Senior Analyst"
+                },
+                {
+                  "name": "Charlene Lanza",
+                  "title": "IT Project Management Senior Director"
+                },
+                {
+                  "name": "Jay Smith",
+                  "title": "IT Project Management Senior Director"
+                },
+                {
+                  "name": "Stan Beroka",
+                  "title": "Application Development Senior Analyst"
+                },
+                {
+                  "name": "Tom Owens",
+                  "title": "Corporate Real Estate Senior Manager"
+                },
+                {
+                  "name": "Martin Zimmer",
+                  "title": "IT Project Management Director"
+                },
+                {
+                  "name": "Deva Talluri",
+                  "title": "Software Engineering Senior Manager"
+                },
+                {
+                  "name": "Jennifer Rodriguez Corporandy",
+                  "title": "Corporate Real Estate Senior Advisor"
+                },
+                {
+                  "name": "Tom Whelan",
+                  "title": "Application Development Senior Analyst"
+                },
+                {
+                  "name": "Anne Streel",
+                  "title": "Corporate Real Estate Senior Manager"
+                },
+                {
+                  "name": "Hollieta Theodore-Vanterpool",
+                  "title": "Financial Planning Lead Senior Analyst"
+                }
+              ]
+            },
+            {
+              "name": "Ryan Funsakulman",
+              "title": "SVP Chief Information Security Officer",
+              "employee_id": "1122334",
+              "direct_reports": [
+                {
+                  "name": "Luriana Caldwell",
+                  "title": "Executive Assistant"
+                },
+                {
+                  "name": "Sharon Clarke",
+                  "title": "IT Project Management Senior Manager"
+                },
+                {
+                  "name": "Jim Hoover",
+                  "title": "VP Information Security"
+                },
+                {
+                  "name": "Mona Lisa Pinkney",
+                  "title": "Information Protection Managing Director"
+                },
+                {
+                  "name": "Delcy Rosa",
+                  "title": "Program Management Managing Director"
+                },
+                {
+                  "name": "Avier Sohindji",
+                  "title": "Information Protection Senior Director"
+                },
+                {
+                  "name": "Jan Vantuyl",
+                  "title": "VP Information Security"
+                },
+                {
+                  "name": "Steve Araujo",
+                  "title": "IT Project Management Senior Manager"
+                },
+                {
+                  "name": "David Gadomski",
+                  "title": "Information Protection Senior Director"
+                },
+                {
+                  "name": "Andre Fernandes",
+                  "title": "Information Protection Senior Manager"
+                },
+                {
+                  "name": "Kellen Hollenback",
+                  "title": "Program Management Senior Manager"
+                },
+                {
+                  "name": "Kunal Patel",
+                  "title": "Information Protection Senior Director"
+                },
+                {
+                  "name": "Tony Halloran",
+                  "title": "Innovation Capability Strategy Director"
+                },
+                {
+                  "name": "Ayanna Bernard",
+                  "title": "IT Project Management Senior Advisor"
+                },
+                {
+                  "name": "Matt Kettleson",
+                  "title": "Information Protection Senior Director"
+                },
+                {
+                  "name": "Tammi Lopez",
+                  "title": "Information Protection Senior Director"
+                },
+                {
+                  "name": "Sharyn Lemmons",
+                  "title": "Program Management Senior Manager"
+                },
+                {
+                  "name": "Michael Talley",
+                  "title": "Information Protection Director"
+                },
+                {
+                  "name": "Jason Bright",
+                  "title": "Information Protection Director"
+                },
+                {
+                  "name": "Ian Jacobs",
+                  "title": "Software Engineering Senior Advisor"
+                },
+                {
+                  "name": "Thomas Kowalski",
+                  "title": "Information Protection Director"
+                },
+                {
+                  "name": "Angel McCann",
+                  "title": "Executive Assistant"
+                },
+                {
+                  "name": "Abbi Pollicella",
+                  "title": "Program Management Senior Advisor"
+                },
+                {
+                  "name": "Priya Gnanasundar",
+                  "title": "Information Protection Managing Director"
+                },
+                {
+                  "name": "Jeff Kuss",
+                  "title": "IT Project Management Senior Manager"
+                },
+                {
+                  "name": "Alan McLellan",
+                  "title": "Information Protection Senior Director"
+                },
+                {
+                  "name": "David Savino",
+                  "title": "Information Protection Senior Director"
+                },
+                {
+                  "name": "Cathy Ware",
+                  "title": "Program Management Senior Manager"
+                },
+                {
+                  "name": "Heather Mielert",
+                  "title": "Information Protection Director"
+                },
+                {
+                  "name": "Tasheia Lattimore",
+                  "title": "Executive Assistant"
+                },
+                {
+                  "name": "Rick Zentow",
+                  "title": "Information Protection Senior Director"
+                },
+                {
+                  "name": "Suzie Stigen",
+                  "title": "Executive Assistant"
+                },
+                {
+                  "name": "Madelyn May",
+                  "title": "IT Project Management Senior Advisor"
+                },
+                {
+                  "name": "Kristina St. Pierre",
+                  "title": "Information Protection Senior Advisor"
+                },
+                {
+                  "name": "Amanda Petroff",
+                  "title": "Business Communications Senior Manager"
+                },
+                {
+                  "name": "Rich Walton",
+                  "title": "Information Protection Director"
+                },
+                {
+                  "name": "Hussain Shamsher",
+                  "title": "IT Project Management Senior Advisor"
+                }
+              ]
+            },
+            {
+              "name": "Allison Greco",
+              "title": "SVP Information Technology",
+              "direct_reports": [
+                {
+                  "name": "Koshy Cherian",
+                  "title": "Information Technology Senior Director"
+                },
+                {
+                  "name": "Sudipto Dey",
+                  "title": "Application Development Senior Director"
+                },
+                {
+                  "name": "Lisa Eckert",
+                  "title": "Administrative Assistant Senior Representative"
+                },
+                {
+                  "name": "David Krotchey",
+                  "title": "IT Strategy Managing Director"
+                },
+                {
+                  "name": "Dallas Long",
+                  "title": "Information Technology Managing Director"
+                },
+                {
+                  "name": "Devon Palera",
+                  "title": "IT Strategy Managing Director"
+                },
+                {
+                  "name": "Jennifer Bentley",
+                  "title": "IT Strategy Managing Director"
+                },
+                {
+                  "name": "Rob Reyak",
+                  "title": "Information Technology Managing Director"
+                },
+                {
+                  "name": "Michael Riopel",
+                  "title": "Software Engineering Senior Director"
+                },
+                {
+                  "name": "Harsha Thampati",
+                  "title": "HH+ Enterprise Engineering Director"
+                },
+                {
+                  "name": "Kurt Green",
+                  "title": "IT Principal"
+                },
+                {
+                  "name": "Imsad Aziz",
+                  "title": "TECDP Lead Analyst"
+                },
+                {
+                  "name": "Karti Bach",
+                  "title": "Software Engineering Senior Director"
+                },
+                {
+                  "name": "Andrew Barnea",
+                  "title": "Software Engineering Senior Director"
+                },
+                {
+                  "name": "Juliana Arighi",
+                  "title": "Software Engineering Senior Manager"
+                },
+                {
+                  "name": "Justin Bigard",
+                  "title": "IT Project Management Senior Director"
+                },
+                {
+                  "name": "Jake Birke",
+                  "title": "Architecture Director"
+                },
+                {
+                  "name": "Milan Dokrota",
+                  "title": "Software Engineering Director"
+                },
+                {
+                  "name": "Marek Gromotski",
+                  "title": "IT Principal"
+                },
+                {
+                  "name": "Even Kuehr",
+                  "title": "TECDP Lead Analyst"
+                },
+                {
+                  "name": "Aneeta Beck",
+                  "title": "Agile Product Management Senior Director"
+                },
+                {
+                  "name": "Mita Dacia",
+                  "title": "Software Engineering Senior Director"
+                },
+                {
+                  "name": "Gypsy Burke",
+                  "title": "Scrum Product Protection Advisor"
+                },
+                {
+                  "name": "Susan Kruwe",
+                  "title": "Operations Effectiveness Senior Advisor"
+                },
+                {
+                  "name": "Carlos Cuesta",
+                  "title": "Software Engineering Senior Director"
+                },
+                {
+                  "name": "Kyle Goodwin",
+                  "title": "Software Engineering Senior Advisor"
+                },
+                {
+                  "name": "Murtidhar Loka",
+                  "title": "IT Principal"
+                },
+                {
+                  "name": "Supanosh Pao",
+                  "title": "TECDP Senior Analyst"
+                },
+                {
+                  "name": "Sergey Yachokly",
+                  "title": "Architecture Director"
+                },
+                {
+                  "name": "Jeff Napoleon",
+                  "title": "IT Principal Senior Director"
+                },
+                {
+                  "name": "Mike Lombardi",
+                  "title": "IT Project Management Director"
+                },
+                {
+                  "name": "Bjorn Miller",
+                  "title": "IT Project Management Director"
+                },
+                {
+                  "name": "Ghanshyam Kumar",
+                  "title": "IT Principal"
+                },
+                {
+                  "name": "Axel Haideg",
+                  "title": "Software Engineering Principal"
+                },
+                {
+                  "name": "Shilmon Mathew",
+                  "title": "Software Engineering Director"
+                },
+                {
+                  "name": "Avinash Suvaraman",
+                  "title": "TECDP Senior Analyst"
+                },
+                {
+                  "name": "Shannon Mashburn",
+                  "title": "Program Management Senior Representative"
+                },
+                {
+                  "name": "Jonah Perez",
+                  "title": "Infrastructure Senior Advisor"
+                },
+                {
+                  "name": "Carolyn Tolley",
+                  "title": "IT Project Management Senior Advisor"
+                },
+                {
+                  "name": "Sanika Jambhelambekar",
+                  "title": "Software Engineering Senior Director"
+                },
+                {
+                  "name": "Stan Hebert",
+                  "title": "Software Engineering Director"
+                },
+                {
+                  "name": "Nauman Mazhar",
+                  "title": "Software Engineering Director"
+                },
+                {
+                  "name": "Mouhamed Toure",
+                  "title": "TECDP Senior Analyst"
+                },
+                {
+                  "name": "Venkat Potluri",
+                  "title": "IT Strategy Senior Director"
+                },
+                {
+                  "name": "Danielle Weers",
+                  "title": "Executive Assistant"
+                },
+                {
+                  "name": "Aalin Ilyas",
+                  "title": "Software Engineering Director"
+                },
+                {
+                  "name": "Dave Myers",
+                  "title": "Software Engineering Director"
+                },
+                {
+                  "name": "Patrick Lawrence",
+                  "title": "Software Engineering Director"
+                },
+                {
+                  "name": "Magan Najarian",
+                  "title": "Agile Product Management Director"
+                },
+                {
+                  "name": "Anders Ravenholt",
+                  "title": "Architecture Principal"
+                },
+                {
+                  "name": "Padma Patali",
+                  "title": "Software Engineering Director"
+                },
+                {
+                  "name": "Fred Whorton",
+                  "title": "Software Engineering Senior Manager"
+                },
+                {
+                  "name": "Bharasha Patel",
+                  "title": "Software Engineering Director"
+                },
+                {
+                  "name": "Pradeep Premlkumar",
+                  "title": "Software Engineering Director"
+                },
+                {
+                  "name": "Varky R",
+                  "title": "Software Engineering Director"
+                },
+                {
+                  "name": "Madhu Venkatachalam",
+                  "title": "Software Engineering Director"
+                }
+              ]
+            },
+            {
+              "name": "Sachin Joshi",
+              "title": "Chief Data & Analytics Engineering Officer",
+              "direct_reports": [
+                {
+                  "name": "Jay Bargeren",
+                  "title": "IT Strategy Senior Director"
+                },
+                {
+                  "name": "Anant Anand",
+                  "title": "HH+ Software Engineering Director"
+                },
+                {
+                  "name": "Tom Bolsjolle",
+                  "title": "IT Strategy Managing Director"
+                },
+                {
+                  "name": "Raul Cariboni",
+                  "title": "Software Engineering Managing Director"
+                },
+                {
+                  "name": "Amit Gollapudi",
+                  "title": "VP Information Technology",
+                  "direct_reports": [
+                    {
+                      "name": "Will Rodgers",
+                      "title": "Information Technology Lead Principal",
+                      "direct_reports": [
+                        {
+                          "name": "Jeremy Davis",
+                          "title": "Software Engineering Senior Director",
+                          "employee_id": "1132756",
+                          "highlighted": true,
+                          "direct_reports": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Mandy Hashami",
+                  "title": "Executive Assistant"
+                },
+                {
+                  "name": "Mike Long",
+                  "title": "VP Information Technology"
+                },
+                {
+                  "name": "Tanya McNamar",
+                  "title": "Software Engineering Managing Director"
+                }
+              ]
+            },
+            {
+              "name": "Scott Macelli",
+              "title": "SVP Information Technology"
+            },
+            {
+              "name": "Madhu Nutakki",
+              "title": "SVP Information Technology",
+              "direct_reports": [
+                {
+                  "name": "Jill Chamberine",
+                  "title": "IT Project Management Director"
+                },
+                {
+                  "name": "Dennie Djumena",
+                  "title": "Operations Senior Advisor"
+                },
+                {
+                  "name": "Aaron Haumann",
+                  "title": "IT Project Management Senior Manager"
+                },
+                {
+                  "name": "Linda Hanson",
+                  "title": "Business Analyst Advisor"
+                },
+                {
+                  "name": "Anil Katyshety",
+                  "title": "IT Strategy Managing Director"
+                },
+                {
+                  "name": "Chuck Mahardharam",
+                  "title": "IT Project Management Managing Director"
+                },
+                {
+                  "name": "Vijayen Nair",
+                  "title": "IT Strategy Senior Director"
+                },
+                {
+                  "name": "Scott Oshion",
+                  "title": "VP Information Technology"
+                },
+                {
+                  "name": "Vojtech Patel",
+                  "title": "VP Information Technology"
+                },
+                {
+                  "name": "Brenda Parisa",
+                  "title": "IT Strategy Senior Director"
+                },
+                {
+                  "name": "Karthik Rathikavel",
+                  "title": "Software Engineering Managing Director"
+                },
+                {
+                  "name": "Marcus Skipwith",
+                  "title": "Application Development Managing Director"
+                },
+                {
+                  "name": "Mahesh Sundaresan",
+                  "title": "VP Information Technology"
+                },
+                {
+                  "name": "Beth Anne Tomiley-Pipke",
+                  "title": "Application Development Managing Director"
+                },
+                {
+                  "name": "Pete Winslow",
+                  "title": "IT Project Management Principal"
+                },
+                {
+                  "name": "Jill D'Onofrio",
+                  "title": "IT Project Management Senior Advisor"
+                },
+                {
+                  "name": "Amos Naneg",
+                  "title": "IT Project Management Senior Advisor"
+                },
+                {
+                  "name": "Magela Candado",
+                  "title": "IT Project Management Senior Advisor"
+                },
+                {
+                  "name": "Carey Elder",
+                  "title": "Administrative Executive Representative"
+                },
+                {
+                  "name": "Bhawan Alluri",
+                  "title": "Architecture Director"
+                },
+                {
+                  "name": "Eunsong Cha",
+                  "title": "IT Principal Senior Manager"
+                },
+                {
+                  "name": "Lara Bonifacio-Lavoie",
+                  "title": "Application Development Managing Director"
+                },
+                {
+                  "name": "Brian Dutkol",
+                  "title": "IT Strategy Senior Manager"
+                },
+                {
+                  "name": "Christina Branch",
+                  "title": "IT Strategy Director"
+                },
+                {
+                  "name": "Amanda Evina",
+                  "title": "Administrative Representative"
+                },
+                {
+                  "name": "Justin Emmett",
+                  "title": "IT Strategy Manager"
+                },
+                {
+                  "name": "Matthew Carroll",
+                  "title": "Software Engineering Senior Director"
+                },
+                {
+                  "name": "Kathleen King",
+                  "title": "Administrative Representative"
+                },
+                {
+                  "name": "Tommie Johnson",
+                  "title": "IT Project Management Senior Manager"
+                },
+                {
+                  "name": "Kirsten Grant",
+                  "title": "IT Project Management Senior Manager"
+                },
+                {
+                  "name": "Vincent Marcosa",
+                  "title": "Engineering Director"
+                },
+                {
+                  "name": "Jason Bavlisch",
+                  "title": "Architecture Director"
+                },
+                {
+                  "name": "Kathleen Crosby",
+                  "title": "IT Strategy Lead Analyst"
+                },
+                {
+                  "name": "Norma Brown",
+                  "title": "Executive Assistant"
+                },
+                {
+                  "name": "Nihal Dudeja",
+                  "title": "IT Senior Principal Senior Analyst"
+                },
+                {
+                  "name": "Renee Callery",
+                  "title": "IT Project Management Director"
+                },
+                {
+                  "name": "Priyanka Gautam",
+                  "title": "EA Strategy Senior Advisor"
+                },
+                {
+                  "name": "Eric Flint",
+                  "title": "IT Project Management Senior Manager"
+                },
+                {
+                  "name": "Sara Carson",
+                  "title": "Agile Product Management Director"
+                },
+                {
+                  "name": "Andrew Lawton",
+                  "title": "Engineering Management Director"
+                },
+                {
+                  "name": "Kyle Stevens",
+                  "title": "IT Project Management Senior Advisor"
+                },
+                {
+                  "name": "Fairley Gustason",
+                  "title": "Agile Product Advisor"
+                },
+                {
+                  "name": "Paul Mohit",
+                  "title": "Application Development Director"
+                },
+                {
+                  "name": "Rashad Bhargava",
+                  "title": "Architecture Director"
+                },
+                {
+                  "name": "Tanya Debey",
+                  "title": "Systems Analyst Senior Manager"
+                },
+                {
+                  "name": "Alexandra Bunin",
+                  "title": "Software Engineering Senior Manager"
+                },
+                {
+                  "name": "Mark Griffin",
+                  "title": "Architecture Director"
+                },
+                {
+                  "name": "Ravjitha Iyer",
+                  "title": "IT Project Management Director"
+                },
+                {
+                  "name": "Justin Joisola",
+                  "title": "Application Development Senior Manager"
+                },
+                {
+                  "name": "Michael Banson",
+                  "title": "IT Strategy Senior Director"
+                },
+                {
+                  "name": "Carmen Hayes",
+                  "title": "IT Project Management Senior Manager"
+                },
+                {
+                  "name": "Thomas MacAlaster",
+                  "title": "IT Project Management Senior Manager"
+                },
+                {
+                  "name": "Lindsay Marcotte",
+                  "title": "IT Senior Advisor"
+                },
+                {
+                  "name": "Ravinda Gulstein",
+                  "title": "Administrative Assistant Senior Representative"
+                },
+                {
+                  "name": "Dominica Luzzi",
+                  "title": "Architecture Principal"
+                },
+                {
+                  "name": "Milissa Lilley",
+                  "title": "IT Project Management Senior Advisor"
+                },
+                {
+                  "name": "Eric Grobau",
+                  "title": "Software Engineering Senior Manager"
+                },
+                {
+                  "name": "Jay Pranticki",
+                  "title": "IT Project Management Director"
+                },
+                {
+                  "name": "Robyn Larsen",
+                  "title": "Agile Project Management Director"
+                },
+                {
+                  "name": "Connie Jacksen",
+                  "title": "Scrum Master Senior Advisor"
+                },
+                {
+                  "name": "Randy Ronco",
+                  "title": "Agile Project Management Advisor"
+                },
+                {
+                  "name": "Thomas Reid",
+                  "title": "IT Project Management Senior Advisor"
+                },
+                {
+                  "name": "Lakshminanth Ramanujachari",
+                  "title": "Architecture Director"
+                },
+                {
+                  "name": "Biju Mariel",
+                  "title": "Application Development Senior Manager"
+                },
+                {
+                  "name": "Randle Mascher",
+                  "title": "Architecture Director"
+                },
+                {
+                  "name": "Ryan Herring",
+                  "title": "Architecture Senior Analyst"
+                },
+                {
+                  "name": "Tracey Slider-Payne",
+                  "title": "IT Project Management Director"
+                },
+                {
+                  "name": "Lance Thomas",
+                  "title": "IT Project Management Senior Director"
+                },
+                {
+                  "name": "Susan Masud",
+                  "title": "Executive Assistant"
+                },
+                {
+                  "name": "Nelly Trapani",
+                  "title": "Application Development Director"
+                },
+                {
+                  "name": "Corelis Walker",
+                  "title": "IT Project Management Senior Manager"
+                },
+                {
+                  "name": "Michael Olson",
+                  "title": "Software Engineering Director"
+                },
+                {
+                  "name": "Venkatraman Reddy Medasani",
+                  "title": "IT Principal Senior Advisor"
+                },
+                {
+                  "name": "Jen Olson",
+                  "title": "Infrastructure Managing Director"
+                },
+                {
+                  "name": "Bob Harrison",
+                  "title": "Engineering Management Senior Manager"
+                },
+                {
+                  "name": "Sarah Williams",
+                  "title": "Software Engineering Director"
+                },
+                {
+                  "name": "Arvind Narayann",
+                  "title": "Software Engineering Senior Director"
+                },
+                {
+                  "name": "Ron Bodeman Ravi",
+                  "title": "IT Senior Principal Senior Advisor"
+                },
+                {
+                  "name": "Bryant Plechot",
+                  "title": "Application Development Senior Manager"
+                },
+                {
+                  "name": "Dant Pistasrelli",
+                  "title": "Software Engineering Senior Manager"
+                },
+                {
+                  "name": "Tyler Lemieux",
+                  "title": "Application Development Senior Manager"
+                },
+                {
+                  "name": "Wei Zhang",
+                  "title": "Engineering Management Director"
+                },
+                {
+                  "name": "Vijay Pyreddy",
+                  "title": "Software Engineering Director"
+                },
+                {
+                  "name": "Harry Wamboki",
+                  "title": "Application Development Senior Director"
+                },
+                {
+                  "name": "Eric Pangan",
+                  "title": "Application Development Director"
+                },
+                {
+                  "name": "Madeena Radhuddin",
+                  "title": "Software Engineering Senior Manager"
+                },
+                {
+                  "name": "Katherine Pierson",
+                  "title": "TECDP Senior Analyst"
+                },
+                {
+                  "name": "Eugenio Stewart",
+                  "title": "Software Engineering Senior Manager"
+                },
+                {
+                  "name": "Abdul Raseed Shah",
+                  "title": "IT Senior Principal Senior Director"
+                },
+                {
+                  "name": "Chris Rucci",
+                  "title": "Engineering Management Senior Director"
+                },
+                {
+                  "name": "Steve Warner",
+                  "title": "Architecture Principal"
+                },
+                {
+                  "name": "Christopher Urban",
+                  "title": "Application Development Senior Director"
+                },
+                {
+                  "name": "Abbey Short",
+                  "title": "Software Engineering Senior Advisor"
+                },
+                {
+                  "name": "Randip Smith",
+                  "title": "Engineering Management Senior Manager"
+                },
+                {
+                  "name": "Michelle Wolke",
+                  "title": "Agile Product Management Senior Director"
+                },
+                {
+                  "name": "Prem Ralurner",
+                  "title": "Architecture Senior Director"
+                },
+                {
+                  "name": "Laura Stickel",
+                  "title": "Application Development Director"
+                },
+                {
+                  "name": "Krishna Vasista",
+                  "title": "Application Engineer Senior Manager"
+                },
+                {
+                  "name": "Todd Wolnai",
+                  "title": "Architecture Lead Analyst"
+                }
+              ]
+            },
+            {
+              "name": "Paul Oaten",
+              "title": "Free Agent Managing Director"
+            },
+            {
+              "name": "Eric Reed",
+              "title": "SVP Information Technology",
+              "direct_reports": [
+                {
+                  "name": "Anthony Abate",
+                  "title": "SVP Supply Chain Management"
+                },
+                {
+                  "name": "Jennifer Berry",
+                  "title": "Infrastructure Engineering Director"
+                },
+                {
+                  "name": "Alan Clarke",
+                  "title": "Infrastructure Engineering Director"
+                },
+                {
+                  "name": "Lisa Hampton",
+                  "title": "Executive Assistant"
+                },
+                {
+                  "name": "Christopher Moretti",
+                  "title": "VP Information Technology"
+                },
+                {
+                  "name": "Lisa Oliver",
+                  "title": "IT Strategy Managing Director"
+                },
+                {
+                  "name": "Alex Pearson",
+                  "title": "VP Information Technology"
+                },
+                {
+                  "name": "Edward Rado",
+                  "title": "VP Information Technology"
+                },
+                {
+                  "name": "Michael Wheeler",
+                  "title": "VP Information Technology"
+                },
+                {
+                  "name": "Dan Carmody",
+                  "title": "Category Management Senior Director"
+                },
+                {
+                  "name": "Roquelle Hamilton",
+                  "title": "IT Project Management Senior Manager"
+                },
+                {
+                  "name": "Tony Buontemps",
+                  "title": "Information Technology Managing Director"
+                },
+                {
+                  "name": "Deanna Baker",
+                  "title": "Stakeholder Relationship Director"
+                },
+                {
+                  "name": "Sean Kilmer",
+                  "title": "Infrastructure Engineering Senior Director"
+                },
+                {
+                  "name": "Garry Eng",
+                  "title": "Infrastructure Engineering Director"
+                },
+                {
+                  "name": "Brady Goodman",
+                  "title": "Infrastructure Engineering Director"
+                },
+                {
+                  "name": "Julia Gabriel",
+                  "title": "Executive Assistant"
+                },
+                {
+                  "name": "Danny Norbury",
+                  "title": "IT Project Management Senior Manager"
+                },
+                {
+                  "name": "Heidi Linder",
+                  "title": "Executive Assistant"
+                },
+                {
+                  "name": "Sourav Choudhury",
+                  "title": "Infrastructure Technology Senior Director"
+                },
+                {
+                  "name": "Erik Krawiec",
+                  "title": "Infrastructure Engineering Senior Director"
+                },
+                {
+                  "name": "Charlie Moore",
+                  "title": "IT Strategy Managing Director"
+                },
+                {
+                  "name": "Michael Horlecher",
+                  "title": "Information Technology Managing Director"
+                },
+                {
+                  "name": "Carlos Guzman",
+                  "title": "Category Management Managing Director"
+                },
+                {
+                  "name": "Zoe Stephens-North",
+                  "title": "IT Project Management Lead Analyst"
+                },
+                {
+                  "name": "Clint Mazur",
+                  "title": "Information Technology Managing Director"
+                },
+                {
+                  "name": "Dolly Mathew",
+                  "title": "Business Project Director"
+                },
+                {
+                  "name": "Adam Martin",
+                  "title": "IT Senior Principal"
+                },
+                {
+                  "name": "Jim Roland",
+                  "title": "Information Technology Managing Director"
+                },
+                {
+                  "name": "LuAnn Lynch",
+                  "title": "Executive Assistant"
+                },
+                {
+                  "name": "Jim Kucharczyk",
+                  "title": "Category Management Managing Director"
+                },
+                {
+                  "name": "Nick Nocerino",
+                  "title": "Software Engineering Managing Director"
+                },
+                {
+                  "name": "Greg Murphy",
+                  "title": "Infrastructure Engineering Director"
+                },
+                {
+                  "name": "Maureen Mellett",
+                  "title": "Information Technology Managing Director"
+                },
+                {
+                  "name": "Marty Solomon",
+                  "title": "Information Technology Managing Director"
+                },
+                {
+                  "name": "Phani Paruchuri",
+                  "title": "Software Engineering Senior Director"
+                },
+                {
+                  "name": "Farzaneh Samie",
+                  "title": "Category Management Managing Director"
+                },
+                {
+                  "name": "Bill Sprague",
+                  "title": "Software Engineering Managing Director"
+                },
+                {
+                  "name": "Eric Raibeck",
+                  "title": "Architecture Senior Director"
+                },
+                {
+                  "name": "Toni Melton",
+                  "title": "Executive Assistant"
+                },
+                {
+                  "name": "Joseph Paul",
+                  "title": "Infrastructure Engineering Director"
+                },
+                {
+                  "name": "Djas Sampat",
+                  "title": "Third Party Management & Financial Compliance Principal"
+                },
+                {
+                  "name": "John Steniger",
+                  "title": "IT Senior Principal"
+                },
+                {
+                  "name": "Keith Robinson",
+                  "title": "Infrastructure Engineering Director"
+                },
+                {
+                  "name": "Jeremiah Pierson-Balik",
+                  "title": "Information Technology Managing Director"
+                },
+                {
+                  "name": "Frank Polashek",
+                  "title": "Infrastructure Engineering Director"
+                },
+                {
+                  "name": "Brian Yovino",
+                  "title": "Architecture Senior Director"
+                },
+                {
+                  "name": "Chris Rogers",
+                  "title": "IT Strategy Director"
+                },
+                {
+                  "name": "Ben Schuck",
+                  "title": "Information Technology Managing Director"
+                },
+                {
+                  "name": "Oksana Shtuka",
+                  "title": "Data Management Strategy & Governance Managing Director"
+                },
+                {
+                  "name": "Chris Stetson",
+                  "title": "Distinguished Engineer"
+                }
+              ]
+            },
+            {
+              "name": "Victoria Wheeler",
+              "title": "SVP Operations"
+            },
+            {
+              "name": "Doug Woodard",
+              "title": "SVP Operations",
+              "direct_reports": [
+                {
+                  "name": "Amit Bhatt",
+                  "title": "VP Operations"
+                },
+                {
+                  "name": "Joel Brown",
+                  "title": "VP Operations"
+                },
+                {
+                  "name": "Allison Clifton",
+                  "title": "Operations Principal"
+                },
+                {
+                  "name": "Chris Dameron",
+                  "title": "VP Operations"
+                },
+                {
+                  "name": "Linda Rivera",
+                  "title": "Executive Assistant"
+                },
+                {
+                  "name": "Christen Shelton",
+                  "title": "VP Operations"
+                },
+                {
+                  "name": "Matt Gallaher",
+                  "title": "Operations Effectiveness Senior Director"
+                },
+                {
+                  "name": "TJ Asute",
+                  "title": "Operations Managing Director"
+                },
+                {
+                  "name": "Erin Warner",
+                  "title": "OLDP Lead Analyst"
+                },
+                {
+                  "name": "Robert Cooper",
+                  "title": "Operations Senior Director"
+                },
+                {
+                  "name": "Mandy Booth",
+                  "title": "Executive Assistant"
+                },
+                {
+                  "name": "Adam Hubbs",
+                  "title": "Operations Senior Director"
+                },
+                {
+                  "name": "Katherine Campbell",
+                  "title": "Business Project Senior Advisor"
+                },
+                {
+                  "name": "Gina Davis",
+                  "title": "Program Management Director"
+                },
+                {
+                  "name": "Ivy Bryant",
+                  "title": "Operations Senior Director"
+                },
+                {
+                  "name": "Deborah Mantler",
+                  "title": "Executive Assistant"
+                },
+                {
+                  "name": "Brian Gausmann",
+                  "title": "Operations Senior Director"
+                },
+                {
+                  "name": "Patricia Jones",
+                  "title": "Business Project Senior Advisor"
+                },
+                {
+                  "name": "Rob Comella",
+                  "title": "Operations Director"
+                },
+                {
+                  "name": "Jennifer Narducci",
+                  "title": "Operations Senior Director"
+                },
+                {
+                  "name": "Teresa Henning",
+                  "title": "Executive Assistant"
+                },
+                {
+                  "name": "Kelly Leblanc",
+                  "title": "Executive Assistant"
+                },
+                {
+                  "name": "Albert Langewood",
+                  "title": "Operations Senior Director"
+                },
+                {
+                  "name": "Jeremy Nelson",
+                  "title": "Operations Senior Director"
+                },
+                {
+                  "name": "Chris Leadbetter",
+                  "title": "Operations Managing Director"
+                },
+                {
+                  "name": "LaTasha Monroe",
+                  "title": "Customer Service"
+                },
+                {
+                  "name": "Ronnie Miller",
+                  "title": "Client Account Support Senior Director"
+                },
+                {
+                  "name": "Rusie Yaeger",
+                  "title": "Business Project Senior Advisor"
+                },
+                {
+                  "name": "Elisabeth McCloskey",
+                  "title": "Operational Risk Director"
+                },
+                {
+                  "name": "Teresa Norman",
+                  "title": "Product Strategy Senior Manager"
+                },
+                {
+                  "name": "Whitnei Pryor",
+                  "title": "Operating Effectiveness Senior Manager"
+                },
+                {
+                  "name": "Juan McGinness",
+                  "title": "Operations Senior Director"
+                },
+                {
+                  "name": "Jennifer Paley",
+                  "title": "Operations Managing Director"
+                },
+                {
+                  "name": "Connor Ryan",
+                  "title": "Business Project Senior Advisor"
+                },
+                {
+                  "name": "Kris Ramsey",
+                  "title": "Operations Senior Director"
+                },
+                {
+                  "name": "Alicia Snow",
+                  "title": "Client Account Support Senior Director"
+                },
+                {
+                  "name": "Dale Sahs",
+                  "title": "Operations Senior Director"
+                },
+                {
+                  "name": "Elizabeth Williams",
+                  "title": "Operations Director"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "jeremy_davis_reporting_chain": [
+      {
+        "level": 1,
+        "name": "Jeremy Davis",
+        "title": "Software Engineering Senior Director",
+        "employee_id": "1132756"
+      },
+      {
+        "level": 2,
+        "name": "Will Rodgers",
+        "title": "Information Technology Lead Principal"
+      },
+      {
+        "level": 3,
+        "name": "Amit Gollapudi",
+        "title": "VP Information Technology"
+      },
+      {
+        "level": 4,
+        "name": "Sachin Joshi",
+        "title": "Chief Data & Analytics Engineering Officer"
+      },
+      {
+        "level": 5,
+        "name": "DP Koka",
+        "title": "EVP CIO"
+      },
+      {
+        "level": 6,
+        "name": "David Cordani",
+        "title": "Chairman and Chief Executive Officer",
+        "employee_id": "103056"
+      }
+    ],
+    "metadata": {
+      "source": "Cigna Phone Directory",
+      "url": "phonedirectory.corp.cigna.com/phonedirectory/",
+      "extracted_date": "2025-10-30",
+      "total_employees_mapped": "500+",
+      "organizational_depth": "Multiple levels from CEO to individual contributors across entire IT organization",
+      "dp_koka_direct_reports": 14,
+      "major_divisions": [
+        "Tom Britt - SVP Information Technology",
+        "Pat Brown - SVP Provider Solutions & Operations",
+        "Neal Chopdekar - SVP Information Technology",
+        "Ryan Fusselman - SVP Chief Information Security Officer",
+        "Allison Greco - SVP Information Technology",
+        "Sachin Joshi - Chief Data & Analytics Engineering Officer",
+        "Scott Machi - SVP Information Technology",
+        "Madhu Nutakki - SVP Information Technology",
+        "Paul Oates - Free Agent Managing Director",
+        "Eric Reed - SVP Information Technology",
+        "Victoria Wheeler - SVP Operations",
+        "Doug Woodard - SVP Operations"
+      ],
+      "jeremy_davis_position_note": "Jeremy Davis is positioned as Software Engineering Senior Director within Will Rodgers' team, which reports to Amit Gollapudi (VP Information Technology), who reports to Sachin Joshi (Chief Data & Analytics Engineering Officer), who reports to DP Koka (EVP CIO), who reports directly to CEO David Cordani.",
+      "notes": "This comprehensive hierarchy maps the complete IT organization under DP Koka, including all major divisions: Information Technology, Provider Solutions & Operations, Information Security, Data & Analytics Engineering, and Operations. The organization spans multiple functional areas including software engineering, infrastructure, architecture, project management, security, and operations."
+    }
+  }

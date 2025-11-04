@@ -44,6 +44,8 @@ class Settings:
     AGENT_PARALLEL_PROCESSING_LIMIT: int
     AGENT_MAX_RETRIES: int
     AGENT_ENABLE_BRAINTRUST: bool
+    AGENT_ENABLE_JUDGE: bool
+    AGENT_ENABLE_LOCAL_LOGS: bool
 
     # Files
     UPLOAD_DIR: str
@@ -91,6 +93,8 @@ def load_settings() -> Settings:
         AGENT_PARALLEL_PROCESSING_LIMIT=_get_int("AGENT_PARALLEL_PROCESSING_LIMIT", 4),
         AGENT_MAX_RETRIES=_get_int("AGENT_MAX_RETRIES", 1),
         AGENT_ENABLE_BRAINTRUST=_get_bool("AGENT_ENABLE_BRAINTRUST", "false"),
+        AGENT_ENABLE_JUDGE=_get_bool("AGENT_ENABLE_JUDGE", "false"),
+        AGENT_ENABLE_LOCAL_LOGS=_get_bool("AGENT_ENABLE_LOCAL_LOGS", "true"),
         UPLOAD_DIR=os.getenv("UPLOAD_DIR", "./uploads"),
         MAX_FILE_SIZE=_get_int("MAX_FILE_SIZE", 10 * 1024 * 1024),
         DEBUG=_get_bool("DEBUG", "false"),

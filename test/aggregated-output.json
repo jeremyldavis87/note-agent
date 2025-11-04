@@ -1,0 +1,549 @@
+{
+  "image_metadata": {
+    "total_notes_detected": 18,
+    "detection_method": "grid_heuristic",
+    "background_color": "unknown",
+    "note_arrangement": "3x3_grid"
+  },
+  "notes": [
+    {
+      "position": "row_1_col_1",
+      "note_color": null,
+      "qr_code_present": false,
+      "qr_code_position": null,
+      "qr_code_info": null,
+      "title": "Daily Note",
+      "header": null,
+      "raw_text": "## Daily Note\nClint 1-on-1\n• WWT discussion\n• Steps forward\n• Rationalization\n• Coding assistance\n☐ Formalize metadata\n\n~~~~~\nAlex Gornov\n• Ready to get\n• Looking at",
+      "formatted_text": "## Daily Note\nClint 1-on-1\n• WWT discussion\n• Steps forward\n• Rationalization\n• Coding assistance\n☐ Formalize metadata\n\n~~~~~\nAlex Gornov\n• Ready to get\n• Looking at",
+      "action_items": [
+        "Hold a 1-on-1 with Clint.",
+        "Discuss WWT with Clint.",
+        "Define next steps with Clint.",
+        "Review rationalization approach with Clint.",
+        "Provide coding assistance as needed.",
+        "Formalize metadata.",
+        "Clarify Alex Gornov's items (\"Ready to get\", \"Looking at\") and capture specifics."
+      ],
+      "tags": [
+        "meeting",
+        "1-on-1",
+        "clint",
+        "wwt",
+        "next-steps",
+        "rationalization",
+        "coding-assistance",
+        "metadata",
+        "alex-gornov"
+      ],
+      "checkboxes": 1,
+      "confidence_score": 0.9,
+      "processing_method": "vision_llm"
+    },
+    {
+      "position": "row_1_col_2",
+      "note_color": null,
+      "qr_code_present": false,
+      "qr_code_position": null,
+      "qr_code_info": null,
+      "title": "Notes: 10/22/2025",
+      "header": null,
+      "raw_text": "es: 10/22/2025 ##\n\nssion\nard\ntion\nstant operating model\ne variables + thoaghts ar\n, hyperscaler\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n1-on-1\nt into innovation\nNER effort w/ Tyler",
+      "formatted_text": "es: 10/22/2025 ##\n\nssion\nard\ntion\nstant operating model\ne variables + thoaghts ar\n, hyperscaler\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n1-on-1\nt into innovation\nNER effort w/ Tyler",
+      "action_items": [
+        "Schedule a 1:1.",
+        "Deep-dive into innovation initiatives.",
+        "Coordinate the NER effort with Tyler.",
+        "Define a consistent operating model.",
+        "List the variables and thoughts related to the operating model.",
+        "Evaluate hyperscaler options."
+      ],
+      "tags": [
+        "innovation",
+        "operating-model",
+        "hyperscalers",
+        "ner",
+        "1:1",
+        "tyler"
+      ],
+      "checkboxes": null,
+      "confidence_score": 0.9,
+      "processing_method": "vision_llm"
+    },
+    {
+      "position": "row_1_col_3",
+      "note_color": null,
+      "qr_code_present": false,
+      "qr_code_position": null,
+      "qr_code_info": null,
+      "title": "Found neo-cloud, bare",
+      "header": null,
+      "raw_text": "ound neo-cloud, bare\n____________________",
+      "formatted_text": "ound neo-cloud, bare\n____________________",
+      "action_items": [],
+      "tags": [
+        "neo-cloud"
+      ],
+      "checkboxes": null,
+      "confidence_score": 0.9,
+      "processing_method": "vision_llm"
+    },
+    {
+      "position": "row_2_col_1",
+      "note_color": "red",
+      "qr_code_present": false,
+      "qr_code_position": null,
+      "qr_code_info": null,
+      "title": null,
+      "header": null,
+      "raw_text": "- Triples\n- Working to\n\n~\nProduct Res\n• HeyGen/Sy\n• ElevenLabs\n\n~\nTo Do\n☐ MacBooks\n☐ AI Job Fam\n☐ Patient Ex\n☐ Client E2E\n",
+      "formatted_text": "• Triples\n• Working to\n\n~\nProduct Res\n• HeyGen/Sy\n• ElevenLabs\n\n~\nTo Do\n☐ MacBooks\n☐ AI Job Fam\n☐ Patient Ex\n☐ Client E2E\n",
+      "action_items": [
+        "Evaluate HeyGen and Synthesia as part of product research.",
+        "Evaluate ElevenLabs for speech synthesis capabilities.",
+        "Procure MacBooks for the team.",
+        "Define the AI job family.",
+        "Assess patient experience.",
+        "Design the client end-to-end experience."
+      ],
+      "tags": [
+        "product research",
+        "heygen",
+        "synthesia",
+        "elevenlabs",
+        "macbooks",
+        "ai job family",
+        "patient experience",
+        "client end-to-end",
+        "triples"
+      ],
+      "checkboxes": 4,
+      "confidence_score": 0.9,
+      "processing_method": "vision_llm"
+    },
+    {
+      "position": "row_2_col_2",
+      "note_color": null,
+      "qr_code_present": false,
+      "qr_code_position": null,
+      "qr_code_info": null,
+      "title": null,
+      "header": null,
+      "raw_text": "motivate himself\n\nsearch\nsynthesis\ns\n\nAs for HIH\nfamily roles\nexperience Ideation\n& AI Ideation\nand Demand Snow",
+      "formatted_text": "motivate himself\n\nsearch\nsynthesis\ns\n\nAs for HIH\nfamily roles\nexperience Ideation\n& AI Ideation\nand Demand Snow",
+      "action_items": [
+        "Conduct research on the relevant topics",
+        "Synthesize the findings into a concise summary",
+        "Define and document HIH (Hyderabad Innovation Hub) family roles",
+        "Schedule and facilitate an experience ideation session",
+        "Schedule and facilitate an AI ideation session",
+        "Capture demand items in ServiceNow (SNOW)"
+      ],
+      "tags": [
+        "motivation",
+        "search",
+        "synthesis",
+        "hih",
+        "hyderabad-innovation-hub",
+        "family-roles",
+        "experience-ideation",
+        "ai-ideation",
+        "servicenow",
+        "demand-management"
+      ],
+      "checkboxes": null,
+      "confidence_score": 0.9,
+      "processing_method": "vision_llm"
+    },
+    {
+      "position": "row_2_col_3",
+      "note_color": null,
+      "qr_code_present": false,
+      "qr_code_position": null,
+      "qr_code_info": null,
+      "title": "Globe Tiny Fish Fastline",
+      "header": null,
+      "raw_text": "\n\n\n\nOGlobe Tiny Fish Fastline",
+      "formatted_text": "\n\n\n\nOGlobe Tiny Fish Fastline",
+      "action_items": [],
+      "tags": [
+        "globe",
+        "tiny-fish",
+        "fastline"
+      ],
+      "checkboxes": null,
+      "confidence_score": 0.9,
+      "processing_method": "vision_llm"
+    },
+    {
+      "position": "row_3_col_1",
+      "note_color": null,
+      "qr_code_present": true,
+      "qr_code_position": "bottom_left",
+      "qr_code_info": "P01 V17 T01 S000",
+      "title": null,
+      "header": null,
+      "raw_text": "☐ Vendor con\n☐ Strategic p\n☐ LiteLLM\n☐ Schedule t\n☐ Contact sw\n☐ Chargeback\n☐ Set up time\n☐ Review gua",
+      "formatted_text": "☐ Vendor con\n☐ Strategic p\n☐ LiteLLM\n☐ Schedule t\n☐ Contact sw\n☐ Chargeback\n☐ Set up time\n☐ Review gua",
+      "action_items": [
+        "Review vendor contracts",
+        "Finalize the strategic plan",
+        "Configure and validate the LiteLLM service gateway",
+        "Schedule training",
+        "Contact the software procurement team",
+        "Define the chargeback model",
+        "Set up time with stakeholders",
+        "Review AI guardrails"
+      ],
+      "tags": [
+        "vendor-contracts",
+        "strategic-planning",
+        "litellm",
+        "training",
+        "procurement",
+        "chargeback",
+        "scheduling",
+        "ai-guardrails"
+      ],
+      "checkboxes": 8,
+      "confidence_score": 0.9,
+      "processing_method": "vision_llm"
+    },
+    {
+      "position": "row_3_col_2",
+      "note_color": null,
+      "qr_code_present": false,
+      "qr_code_position": null,
+      "qr_code_info": null,
+      "title": null,
+      "header": null,
+      "raw_text": "plan w/Anthropic\ntech team touchpoints\nrish.ai\nces - AI Gateway cost model\none w/ Jennie Chen\nguardrails",
+      "formatted_text": "plan w/Anthropic\ntech team touchpoints\nrish.ai\nces • AI Gateway cost model\none w/ Jennie Chen\nguardrails",
+      "action_items": [
+        "Plan a working session with Anthropic on AI Gateway integration.",
+        "Schedule recurring touchpoints with the tech team.",
+        "Evaluate rish.ai for relevance to AI Gateway use cases and compliance.",
+        "Develop the AI Gateway cost model for CES.",
+        "Schedule a 1:1 with Jennie Chen.",
+        "Define and document AI Gateway guardrails (security, compliance, usage)."
+      ],
+      "tags": [
+        "anthropic",
+        "tech-team-touchpoints",
+        "rish-ai",
+        "ces",
+        "ai-gateway",
+        "cost-model",
+        "jennie-chen",
+        "guardrails"
+      ],
+      "checkboxes": null,
+      "confidence_score": 0.9,
+      "processing_method": "vision_llm"
+    },
+    {
+      "position": "row_3_col_3",
+      "note_color": null,
+      "qr_code_present": false,
+      "qr_code_position": null,
+      "qr_code_info": null,
+      "title": null,
+      "header": null,
+      "raw_text": "(i.e. fixed vs variable)",
+      "formatted_text": "(i.e. fixed vs variable)",
+      "action_items": [
+        "Decide between a fixed or variable approach.",
+        "Define evaluation criteria for choosing fixed vs. variable.",
+        "Collect data to compare fixed vs. variable options.",
+        "Document the decision and rationale."
+      ],
+      "tags": [
+        "fixed",
+        "variable",
+        "comparison",
+        "decision",
+        "criteria"
+      ],
+      "checkboxes": null,
+      "confidence_score": 0.9,
+      "processing_method": "vision_llm"
+    },
+    {
+      "position": "row_1_col_1",
+      "note_color": null,
+      "qr_code_present": false,
+      "qr_code_position": null,
+      "qr_code_info": null,
+      "title": null,
+      "header": null,
+      "raw_text": "Mukesh\n• Langsmith\n  ↳ Visibility\n  ↳ PII/PHI\n• GPU hardware\n\n~ ~ ~ ~ ~\nAlexis Powell 1-\n• Guardian AI\n• Unstructured",
+      "formatted_text": "Mukesh\n• Langsmith\n  ↳ Visibility\n  ↳ PII/PHI\n• GPU hardware\n\n~ ~ ~ ~ ~\nAlexis Powell 1-\n• Guardian AI\n• Unstructured",
+      "action_items": [
+        "Assess Langsmith for visibility features",
+        "Validate PII/PHI handling and compliance in Langsmith",
+        "Determine GPU hardware requirements and availability",
+        "Coordinate with Alexis Powell on Guardian AI and Unstructured",
+        "Evaluate Guardian AI",
+        "Evaluate Unstructured"
+      ],
+      "tags": [
+        "langsmith",
+        "visibility",
+        "pii",
+        "phi",
+        "gpu-hardware",
+        "guardian-ai",
+        "unstructured",
+        "alexis-powell",
+        "mukesh"
+      ],
+      "checkboxes": null,
+      "confidence_score": 0.9,
+      "processing_method": "vision_llm"
+    },
+    {
+      "position": "row_1_col_2",
+      "note_color": null,
+      "qr_code_present": false,
+      "qr_code_position": null,
+      "qr_code_info": null,
+      "title": null,
+      "header": null,
+      "raw_text": "- No way to de-identify\n\non-1\nio - has been a little frustrat",
+      "formatted_text": "• No way to de-identify\n\non-1\nio • has been a little frustrat",
+      "action_items": [
+        "Evaluate and propose options to de-identify data",
+        "Align with Privacy/Compliance on an approved de-identification approach",
+        "Schedule a 1-on-1 to address recent frustrations and prepare an agenda"
+      ],
+      "tags": [
+        "de-identification",
+        "data privacy",
+        "compliance",
+        "1-on-1",
+        "frustration"
+      ],
+      "checkboxes": null,
+      "confidence_score": 0.9,
+      "processing_method": "vision_llm"
+    },
+    {
+      "position": "row_1_col_3",
+      "note_color": "orange",
+      "qr_code_present": false,
+      "qr_code_position": null,
+      "qr_code_info": null,
+      "title": null,
+      "header": null,
+      "raw_text": "Follow up next\nweek on goals",
+      "formatted_text": "Follow up next\nweek on goals",
+      "action_items": [
+        "Follow up on goals next week"
+      ],
+      "tags": [
+        "follow-up",
+        "goals",
+        "next-week"
+      ],
+      "checkboxes": null,
+      "confidence_score": 0.9,
+      "processing_method": "vision_llm"
+    },
+    {
+      "position": "row_2_col_1",
+      "note_color": null,
+      "qr_code_present": false,
+      "qr_code_position": null,
+      "qr_code_info": null,
+      "title": null,
+      "header": null,
+      "raw_text": "• Likes working\n• Likes spicy foo\n• Advisor - Prave\n\nAzure OpenAI\n• Attendees\n  ↳ Erik Golden\n  ↳ Patti Lukas\n  ↳ Will Rodger\n\nCGI Nav!\n• Jira API acc\n• Dogma app c\n• Ajaz for app\n• AI1349\n\nPlatform Priori",
+      "formatted_text": "• Likes working\n• Likes spicy foo\n• Advisor • Prave\n\nAzure OpenAI\n• Attendees\n  ↳ Erik Golden\n  ↳ Patti Lukas\n  ↳ Will Rodger\n\nCGI Nav!\n• Jira API acc\n• Dogma app c\n• Ajaz for app\n• AI1349\n\nPlatform Priori",
+      "action_items": [
+        "Schedule an Azure OpenAI meeting and confirm attendees: Erik Golden, Patti Lukas, and Will Rodger.",
+        "Obtain Jira API access.",
+        "Clarify the note about the Dogma app and define next steps.",
+        "Coordinate with Ajaz regarding the app.",
+        "Review ticket AI1349 and determine required actions.",
+        "Document and prioritize platform priorities.",
+        "Confirm advisor details with Prave."
+      ],
+      "tags": [
+        "likes-working",
+        "likes-spicy-food",
+        "advisor-prave",
+        "azure-openai",
+        "erik-golden",
+        "patti-lukas",
+        "will-rodger",
+        "cgi-nav",
+        "jira-api-access",
+        "dogma-app",
+        "ajaz",
+        "ai1349",
+        "platform-priorities"
+      ],
+      "checkboxes": null,
+      "confidence_score": 0.9,
+      "processing_method": "vision_llm"
+    },
+    {
+      "position": "row_2_col_2",
+      "note_color": null,
+      "qr_code_present": false,
+      "qr_code_position": null,
+      "qr_code_info": null,
+      "title": "IT Proposal",
+      "header": null,
+      "raw_text": "w/ Sarah\nLena Avalurui - MentorQlic - G\n\nIT Proposal\n\n-> Heather Adler        -> Piyush Pandey\n-> Szewicz              -> Curtis Romboli\n-> Mukesh Pandey\n\n---------------------------\n\nProcess\nConflict ->\nApproval!\n\n-> Bradley\n. Alison\n-> Ganesh\n",
+      "formatted_text": "w/ Sarah\nLena Avalurui • MentorQlic • G\n\nIT Proposal\n\n-> Heather Adler        -> Piyush Pandey\n-> Szewicz              -> Curtis Romboli\n-> Mukesh Pandey\n\n---------------------------\n\nProcess\nConflict ->\nApproval!\n\n-> Bradley\n. Alison\n-> Ganesh\n",
+      "action_items": [
+        "Draft the IT proposal for review",
+        "Connect Heather Adler with Piyush Pandey",
+        "Connect Szewicz with Curtis Romboli",
+        "Loop in Mukesh Pandey",
+        "Document the process flow: conflict resolution then approval",
+        "Send for approval to Bradley, Alison, and Ganesh",
+        "Confirm contact details and role for Lena Avaluru (MentorQlik)"
+      ],
+      "tags": [
+        "it-proposal",
+        "approvals",
+        "process",
+        "conflict-resolution",
+        "stakeholders",
+        "introductions",
+        "cigna-healthcare",
+        "ai-coe"
+      ],
+      "checkboxes": null,
+      "confidence_score": 0.9,
+      "processing_method": "vision_llm"
+    },
+    {
+      "position": "row_2_col_3",
+      "note_color": null,
+      "qr_code_present": false,
+      "qr_code_position": null,
+      "qr_code_info": null,
+      "title": "Goal setting",
+      "header": null,
+      "raw_text": "goal setting\n\nde\n\nWyckhouse\n's org",
+      "formatted_text": "goal setting\n\nde\n\nWyckhouse\n's org",
+      "action_items": [
+        "Draft a goal-setting plan for Wyckhouse's organization.",
+        "Schedule a meeting with Wyckhouse to align on organizational goals.",
+        "Finalize and share the agreed goals with the organization."
+      ],
+      "tags": [
+        "goal-setting",
+        "wyckhouse",
+        "organization"
+      ],
+      "checkboxes": null,
+      "confidence_score": 0.9,
+      "processing_method": "vision_llm"
+    },
+    {
+      "position": "row_3_col_1",
+      "note_color": null,
+      "qr_code_present": false,
+      "qr_code_position": null,
+      "qr_code_info": null,
+      "title": null,
+      "header": null,
+      "raw_text": "• 1/1 Readiness\n• LiteLLM\n• Web. Apps\n• MCP Gateway\n• AgentCore En\n• Utilization +\n• Fine-tuning +\n• Sagemaker for\n• News aggregation\n• Prompt manag\n• Model routing",
+      "formatted_text": "• 1/1 Readiness\n• LiteLLM\n• Web. Apps\n• MCP Gateway\n• AgentCore En\n• Utilization +\n• Fine-tuning +\n• Sagemaker for\n• News aggregation\n• Prompt manag\n• Model routing",
+      "action_items": [
+        "Confirm 1/1 readiness checklist and owners across LiteLLM, MCP Gateway, and web apps.",
+        "Deploy LiteLLM in pre-production and validate enterprise integration (authentication, logging, networking).",
+        "Finalize MCP Gateway architecture, routing rules, and security controls.",
+        "Define web app integration patterns and SDKs for the AI gateway.",
+        "Outline AgentCore enablement plan and dependencies.",
+        "Establish utilization metrics and dashboards for the gateway and models.",
+        "Approve fine-tuning governance, data pipelines, and evaluation criteria.",
+        "Decide on Amazon SageMaker scope (training, fine-tuning, hosting) and provision required accounts.",
+        "Build a news aggregation proof of concept to exercise prompt management and routing.",
+        "Implement prompt management with versioning, templates, storage, and approvals.",
+        "Configure model routing policies with fallback and A/B testing.",
+        "Create runbooks and on-call procedures for go-live."
+      ],
+      "tags": [
+        "1/1 readiness",
+        "litellm",
+        "web apps",
+        "mcp gateway",
+        "agentcore enablement",
+        "utilization",
+        "fine-tuning",
+        "sagemaker",
+        "news aggregation",
+        "prompt management",
+        "model routing"
+      ],
+      "checkboxes": null,
+      "confidence_score": 0.9,
+      "processing_method": "vision_llm"
+    },
+    {
+      "position": "row_3_col_2",
+      "note_color": null,
+      "qr_code_present": false,
+      "qr_code_position": null,
+      "qr_code_info": null,
+      "title": "Enablement and Agentic Framework",
+      "header": null,
+      "raw_text": "Enablement + Agentic framework\nProjections\nSLM enablement\ndata scientists\non + distribution\ngement - pull out of code",
+      "formatted_text": "Enablement + Agentic framework\nProjections\nSLM enablement\ndata scientists\non + distribution\ngement • pull out of code",
+      "action_items": [
+        "Define the agentic framework and an enablement plan for adoption.",
+        "Create projections for scope, timelines, and capacity needs.",
+        "Establish SLM enablement for data scientists, including tooling, training, and support.",
+        "Engage data scientists to gather use cases and requirements.",
+        "Define the distribution approach for models and components.",
+        "Externalize management/configuration from code."
+      ],
+      "tags": [
+        "enablement",
+        "agentic framework",
+        "slm",
+        "data scientists",
+        "projections",
+        "distribution",
+        "configuration management"
+      ],
+      "checkboxes": null,
+      "confidence_score": 0.9,
+      "processing_method": "vision_llm"
+    },
+    {
+      "position": "row_3_col_3",
+      "note_color": null,
+      "qr_code_present": true,
+      "qr_code_position": "bottom_right",
+      "qr_code_info": "P02 V17 T01 S000",
+      "title": "Work/Formulary",
+      "header": null,
+      "raw_text": "ork/formulary",
+      "formatted_text": "ork/formulary",
+      "action_items": [],
+      "tags": [
+        "formulary",
+        "work"
+      ],
+      "checkboxes": null,
+      "confidence_score": 0.9,
+      "processing_method": "vision_llm"
+    }
+  ],
+  "summary": {
+    "total_action_items": 88,
+    "main_themes": [],
+    "note_colors_used": [
+      "orange",
+      "red"
+    ],
+    "all_qr_codes_present": false,
+    "notebook_brand": "Rocketbook"
+  }
+}

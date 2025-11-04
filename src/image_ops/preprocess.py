@@ -13,6 +13,22 @@ class PreprocessResult:
     metrics: dict
 
 
+def ensure_bgr(image: np.ndarray) -> np.ndarray:
+    """
+    Ensure an image is in BGR format, converting from grayscale if needed.
+    
+    Args:
+        image: Input image (BGR or grayscale)
+        
+    Returns:
+        BGR image (3 channels)
+    """
+    if len(image.shape) == 2:
+        # Grayscale to BGR
+        return cv2.cvtColor(image, cv2.COLOR_GRAY2BGR)
+    return image
+
+
 def preprocess_image(bgr: np.ndarray) -> PreprocessResult:
     gray = cv2.cvtColor(bgr, cv2.COLOR_BGR2GRAY)
     denoised = cv2.fastNlMeansDenoising(gray, h=10)
@@ -29,4 +45,4 @@ def preprocess_image(bgr: np.ndarray) -> PreprocessResult:
     return PreprocessResult(image=stretched, metrics=metrics)
 
 
-__all__ = ["preprocess_image", "PreprocessResult"]
+__all__ = ["preprocess_image", "PreprocessResult", "ensure_bgr"]

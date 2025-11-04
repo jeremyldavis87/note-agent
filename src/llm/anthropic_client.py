@@ -17,29 +17,31 @@ class AnthropicVision(VisionLLMClient):
     def generate(self, req: VisionInput, *, max_tokens: Optional[int] = None) -> str:
         from base64 import b64encode
 
-        b64 = b64encode(req.image_bytes).decode("utf-8")
-        resp = self.client.messages.create(
-            model=self.model,
-            max_tokens=max_tokens or self.max_output_tokens,
-            temperature=0.2,
-            messages=[
-                {
-                    "role": "user",
-                    "content": [
-                        {"type": "text", "text": req.instructions},
-                        {
-                            "type": "image",
-                            "source": {
-                                "type": "base64",
-                                "media_type": "image/jpeg",
-                                "data": b64,
+        try:
+            b64 = b64encode(req.image_bytes).decode("utf-8")
+            resp = self.client.messages.create(
+                model=self.model,
+                max_tokens=max_tokens or self.max_output_tokens,
+                messages=[
+                    {
+                        "role": "user",
+                        "content": [
+                            {"type": "text", "text": req.instructions},
+                            {
+                                "type": "image",
+                                "source": {
+                                    "type": "base64",
+                                    "media_type": "image/jpeg",
+                                    "data": b64,
+                                },
                             },
-                        },
-                    ],
-                }
-            ],
-        )
-        return resp.content[0].text if resp.content else ""
+                        ],
+                    }
+                ],
+            )
+            return resp.content[0].text if resp.content else ""
+        except Exception:
+            return ""
 
 
 class AnthropicText(TextLLMClient):
@@ -49,13 +51,15 @@ class AnthropicText(TextLLMClient):
         self.max_output_tokens = settings.TEXT_AI_MODEL_MAX_OUTPUT_TOKENS
 
     def generate(self, prompt: str, *, max_tokens: Optional[int] = None) -> str:
-        resp = self.client.messages.create(
-            model=self.model,
-            max_tokens=max_tokens or self.max_output_tokens,
-            temperature=0.2,
-            messages=[{"role": "user", "content": prompt}],
-        )
-        return resp.content[0].text if resp.content else ""
+        try:
+            resp = self.client.messages.create(
+                model=self.model,
+                max_tokens=max_tokens or self.max_output_tokens,
+                messages=[{"role": "user", "content": prompt}],
+            )
+            return resp.content[0].text if resp.content else ""
+        except Exception:
+            return ""
 
 
 __all__ = ["AnthropicVision", "AnthropicText"]

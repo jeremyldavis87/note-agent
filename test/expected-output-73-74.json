@@ -1,0 +1,328 @@
+{
+    "image_metadata": {
+      "total_pages": 2,
+      "date": "10/22/2025",
+      "notebook_brand": "Rocketbook",
+      "detection_method": "manual_transcription"
+    },
+    "pages": [
+      {
+        "page_number": 1,
+        "title": "Daily Notes: 10/22/2025",
+        "qr_code_present": true,
+        "qr_code_position": "bottom_left",
+        "sections": [
+          {
+            "section_title": "Clint 1-on-1",
+            "raw_text": "Clint 1-on-1\n• WWT discussion\n• Steps forward\n• Rationalization\n• Coding assistant operating model\n☐ Formalize variables & thoughts around neo-cloud, bare metal, hyperscaler",
+            "action_items": [
+              "Schedule 1-on-1 with Clint",
+              "Discuss WWT with Clint",
+              "Review steps forward",
+              "Discuss rationalization approach",
+              "Review coding assistant operating model",
+              "Formalize variables and thoughts around neo-cloud, bare metal, and hyperscaler options"
+            ],
+            "tags": [
+              "meeting",
+              "1-on-1",
+              "clint",
+              "wwt",
+              "rationalization",
+              "coding-assistant",
+              "operating-model",
+              "neo-cloud",
+              "bare-metal",
+              "hyperscaler"
+            ],
+            "checkboxes": 1
+          },
+          {
+            "section_title": "Alex Gornovoi 1-on-1",
+            "raw_text": "Alex Gornovoi 1-on-1\n• Ready to get into innovation\n• Looking at NER effort w/ Tyler\n• Triples\n• Working to motivate himself",
+            "action_items": [
+              "Schedule 1-on-1 with Alex Gornovoi",
+              "Support Alex in getting into innovation work",
+              "Review NER effort with Tyler",
+              "Discuss Triples project",
+              "Address motivation and engagement with Alex"
+            ],
+            "tags": [
+              "meeting",
+              "1-on-1",
+              "alex-gornovoi",
+              "innovation",
+              "ner",
+              "tyler",
+              "triples",
+              "motivation"
+            ],
+            "checkboxes": 0
+          },
+          {
+            "section_title": "Product Research",
+            "raw_text": "Product Research\n• HeyGen/Synthesia\n• ElevenLabs",
+            "action_items": [
+              "Research HeyGen for video generation",
+              "Research Synthesia for video generation",
+              "Evaluate ElevenLabs for voice synthesis"
+            ],
+            "tags": [
+              "product-research",
+              "heygen",
+              "synthesia",
+              "elevenlabs",
+              "video-generation",
+              "voice-synthesis"
+            ],
+            "checkboxes": 0
+          },
+          {
+            "section_title": "To Do",
+            "raw_text": "To Do\n☐ MacBooks for IT!!\n☐ AI Job Family roles\n☐ Patient Experience Ideation\n☐ Client E2E AI Ideation\n☐ Vendor connects - NotDiamond, SnowGlobe, Tiny Fish, Fastline\n☐ Strategic Plan w/Anthropic\n☐ LiteLLM\n☐ Schedule tech team touchpoints\n☐ Contact Swish.ai\n☐ Chargebacks - AI Gateway cost model (i.e. fixed vs variable)\n☐ Set up time w/ Jennie Chen\n☐ Review guardrails",
+            "action_items": [
+              "Procure MacBooks for IT team",
+              "Define AI Job Family roles",
+              "Facilitate Patient Experience Ideation session",
+              "Facilitate Client E2E AI Ideation session",
+              "Connect with NotDiamond vendor",
+              "Connect with SnowGlobe vendor",
+              "Connect with Tiny Fish vendor",
+              "Connect with Fastline vendor",
+              "Develop Strategic Plan with Anthropic",
+              "Implement/configure LiteLLM",
+              "Schedule recurring tech team touchpoints",
+              "Contact Swish.ai team",
+              "Define chargebacks model for AI Gateway (fixed vs variable cost model)",
+              "Schedule meeting with Jennie Chen",
+              "Review AI guardrails"
+            ],
+            "tags": [
+              "to-do",
+              "macbooks",
+              "procurement",
+              "ai-job-family",
+              "patient-experience",
+              "client-ideation",
+              "vendor-management",
+              "notdiamond",
+              "snowglobe",
+              "tiny-fish",
+              "fastline",
+              "strategic-planning",
+              "anthropic",
+              "litellm",
+              "tech-team",
+              "swish-ai",
+              "chargebacks",
+              "ai-gateway",
+              "cost-model",
+              "jennie-chen",
+              "guardrails"
+            ],
+            "checkboxes": 12
+          }
+        ]
+      },
+      {
+        "page_number": 2,
+        "title": null,
+        "qr_code_present": true,
+        "qr_code_position": "bottom_right",
+        "sections": [
+          {
+            "section_title": "Mukesh",
+            "raw_text": "Mukesh\n• Langsmith\n  ↳ Visibility\n  ↳ PII/PHI - No way to de-identify\n• GPU Hardware",
+            "action_items": [
+              "Discuss Langsmith with Mukesh",
+              "Review visibility features in Langsmith",
+              "Address PII/PHI de-identification limitations in Langsmith",
+              "Discuss GPU hardware requirements with Mukesh"
+            ],
+            "tags": [
+              "mukesh",
+              "langsmith",
+              "visibility",
+              "pii",
+              "phi",
+              "de-identification",
+              "data-privacy",
+              "gpu-hardware"
+            ],
+            "checkboxes": 0
+          },
+          {
+            "section_title": "Alexis Powell 1-on-1",
+            "note_annotation": "Follow up next week on goals",
+            "raw_text": "Alexis Powell 1-on-1\n• Guardian AI\n• Unstructured.io - has been a little frustrating\n• Likes working w/ Sarah\n• Likes spicy food\n• Advisor - Praveena Avaluru - MentorQlic - Goal setting",
+            "action_items": [
+              "Schedule 1-on-1 with Alexis Powell",
+              "Discuss Guardian AI",
+              "Address frustrations with Unstructured.io",
+              "Note working relationship with Sarah",
+              "Connect Alexis with advisor Praveena Avaluru at MentorQlic",
+              "Facilitate goal setting session",
+              "Follow up next week on goals"
+            ],
+            "tags": [
+              "meeting",
+              "1-on-1",
+              "alexis-powell",
+              "guardian-ai",
+              "unstructured-io",
+              "sarah",
+              "advisor",
+              "praveena-avaluru",
+              "mentorqlic",
+              "goal-setting",
+              "follow-up"
+            ],
+            "checkboxes": 0
+          },
+          {
+            "section_title": "Azure OpenAI Proposal",
+            "raw_text": "Azure OpenAI Proposal\n• Attendees\n  ↳ Erik Golden → Heather Adler → Piyush Pandey\n  ↳ Patti Lukaszewicz → Curtis Romboli\n  ↳ Will Rodgers → Mukesh Pandey",
+            "action_items": [
+              "Prepare Azure OpenAI proposal",
+              "Schedule meeting with Erik Golden, Heather Adler, and Piyush Pandey",
+              "Include Patti Lukaszewicz and Curtis Romboli in proposal review",
+              "Loop in Will Rodgers and Mukesh Pandey"
+            ],
+            "tags": [
+              "azure-openai",
+              "proposal",
+              "meeting",
+              "erik-golden",
+              "heather-adler",
+              "piyush-pandey",
+              "patti-lukaszewicz",
+              "curtis-romboli",
+              "will-rodgers",
+              "mukesh-pandey"
+            ],
+            "checkboxes": 0
+          },
+          {
+            "section_title": "CGI Nav!",
+            "note_annotation": "Arrow connections to Bradley Wyckhouse, Alison's org, Ganesh",
+            "raw_text": "CGI Nav!\n• Jira API access\n• Dogma app conflict →\n• Ajaz for approval\n• AI1349",
+            "action_items": [
+              "Obtain Jira API access for CGI Nav",
+              "Resolve Dogma app conflict",
+              "Get approval from Ajaz",
+              "Review ticket AI1349",
+              "Coordinate with Bradley Wyckhouse",
+              "Align with Alison's org",
+              "Involve Ganesh in resolution"
+            ],
+            "tags": [
+              "cgi-nav",
+              "jira",
+              "api-access",
+              "dogma-app",
+              "conflict-resolution",
+              "ajaz",
+              "approval",
+              "ai1349",
+              "bradley-wyckhouse",
+              "alison",
+              "ganesh"
+            ],
+            "checkboxes": 0
+          },
+          {
+            "section_title": "Platform Priorities",
+            "raw_text": "Platform Priorities\n• 1/1 Readiness\n• LiteLLM\n• Web Apps\n• MCP Gateway\n• AgentCore Enablement + Agentic Framework/Formulary\n• Utilization + Projections\n• Fine-tuning + SLM enablement\n• Sagemaker for data scientists\n• News aggregation + distribution\n• Prompt management - pull out of code\n• Model routing",
+            "action_items": [
+              "Complete 1/1 readiness checklist",
+              "Deploy and configure LiteLLM",
+              "Develop web applications integration",
+              "Implement MCP Gateway",
+              "Enable AgentCore with agentic framework and formulary",
+              "Track utilization metrics and create projections",
+              "Set up fine-tuning capabilities and SLM enablement",
+              "Configure Sagemaker for data scientists",
+              "Build news aggregation and distribution system",
+              "Extract prompt management from code into external configuration",
+              "Implement model routing logic"
+            ],
+            "tags": [
+              "platform-priorities",
+              "readiness",
+              "litellm",
+              "web-apps",
+              "mcp-gateway",
+              "agentcore",
+              "agentic-framework",
+              "formulary",
+              "utilization",
+              "projections",
+              "fine-tuning",
+              "slm",
+              "sagemaker",
+              "data-scientists",
+              "news-aggregation",
+              "distribution",
+              "prompt-management",
+              "model-routing"
+            ],
+            "checkboxes": 0
+          }
+        ]
+      }
+    ],
+    "summary": {
+      "total_pages": 2,
+      "total_sections": 9,
+      "total_action_items": 67,
+      "total_checkboxes": 13,
+      "main_themes": [
+        "AI platform development",
+        "Team management and 1-on-1s",
+        "Vendor evaluation and procurement",
+        "Technical infrastructure planning",
+        "Product research",
+        "Goal setting and team enablement"
+      ],
+      "key_people_mentioned": [
+        "Clint",
+        "Alex Gornovoi",
+        "Tyler",
+        "Mukesh",
+        "Alexis Powell",
+        "Sarah",
+        "Praveena Avaluru",
+        "Erik Golden",
+        "Heather Adler",
+        "Piyush Pandey",
+        "Patti Lukaszewicz",
+        "Curtis Romboli",
+        "Will Rodgers",
+        "Mukesh Pandey",
+        "Ajaz",
+        "Bradley Wyckhouse",
+        "Alison",
+        "Ganesh",
+        "Jennie Chen"
+      ],
+      "key_vendors_products": [
+        "NotDiamond",
+        "SnowGlobe",
+        "Tiny Fish",
+        "Fastline",
+        "Anthropic",
+        "LiteLLM",
+        "Swish.ai",
+        "HeyGen",
+        "Synthesia",
+        "ElevenLabs",
+        "Langsmith",
+        "Guardian AI",
+        "Unstructured.io",
+        "MentorQlic",
+        "Azure OpenAI",
+        "Sagemaker",
+        "MCP Gateway"
+      ]
+    }
+  }

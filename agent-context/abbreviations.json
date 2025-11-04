@@ -1,0 +1,26 @@
+{
+  "PIF": {
+    "full_form": "Procurement Intake Form",
+    "description": "intake process for starting a vendor evaluation, contracting, security assessment, etc."
+  },
+  "LiteLLM": {
+    "full_form": "LiteLLM",
+    "description": "New LLM, MCP, and service gateway being brought online for the enterprise to support custom AI application development"
+  },
+  "HIH": {
+    "full_form": "Hyderabad Innovation Hub",
+    "description": "Hyderabad Innovation Hub is an India based team of employees working across multiple teams in the enterprise"
+  },
+  "EMG": {
+    "full_form": "Enterprise Model Governance",
+    "description": "Enterprise team responsible for governing the use of models across the enterprise"
+  },
+  "AZ": {
+    "full_form": "Availability Zone",
+    "description": "Cloud infrastructure term referring to isolated locations within a cloud region for high availability and fault tolerance"
+  },
+  "UWs": {
+    "full_form": "Underwriters",
+    "description": "Business team responsible for risk assessment and approval processes"
+  }
+}

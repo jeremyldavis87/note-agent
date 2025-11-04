@@ -1,0 +1,623 @@
+{
+    "profile_metadata": {
+      "profile_version": "1.0",
+      "last_updated": "2025-10-30",
+      "confidence_level": "high",
+      "data_sources": ["conversation_history", "direct_statements", "inferred_context"]
+    },
+    "personal_information": {
+      "name": {
+        "first_name": "Jeremy",
+        "last_name": "Davis",
+        "preferred_name": "Jeremy"
+      },
+      "location": {
+        "city": "Chattanooga",
+        "state": "Tennessee",
+        "country": "United States",
+        "timezone": "America/Chicago"
+      },
+      "family_status": {
+        "marital_status": "married",
+        "spouse": {
+          "first_name": "Kristi",
+          "last_name": "Davis"
+        },
+        "pets": {
+            "has_pets": true,
+            "description": "furry family"
+          }
+        },
+        "family_relationships": {
+        },
+      "financial_holdings": [
+        {
+          "type": "securities",
+          "company": "GE Aerospace",
+          "custodian": "Equiniti Trust Company (EQ Unity)",
+          "ownership_structure": "joint tenancy",
+          "case_number": "103503247"
+        }
+      ]
+    },
+    "professional_information": {
+      "current_employment": {
+        "company": "Cigna Healthcare",
+        "division": "AI Center of Enablement (COE)",
+        "title": "Software Engineering Senior Director",
+        "band": "High Band 5",
+        "employment_type": "full_time",
+        "management_level": "senior_leadership"
+      },
+      "organizational_structure": {
+        "reports_to": "Will Rodgers",
+        "team_pillars": [
+          {
+            "name": "Platforms and Innovation",
+            "composition": ["software engineers", "ml engineers", "ai engineers"],
+            "focus": "AI platform development and innovation"
+          }
+        ],
+        "organization_pillars": [
+          {
+            "name": "Strategy and Communications",
+            "composition": ["product strategy team members", "PMO", "design resources"],
+            "focus": "strategic planning and organizational communication"
+          },
+          {
+            "name": "Operations and Governance",
+            "composition": ["production support", "customer support", "site reliability engineers"],
+            "focus": "operational excellence and compliance",
+            "notes": "Most resources are not engineers but have coding skills"
+          },
+          {
+            "name": "System Architecture",
+            "composition": ["software engineers with architecture expertise"],
+            "focus": "technical architecture and system design"
+          },
+          {
+            "name": "Platforms and Innovation",
+            "composition": [
+              "platform engineers with AI platform expertise",
+              "software engineering advisors",
+              "software engineering senior advisors",
+              "staff engineers",
+              "architecture principals"
+            ],
+            "focus": "AI platform development and innovation",
+            "notes": "All team members are engineers"
+          },
+          {
+            "name": "Delivery and Enablement",
+            "composition": ["software engineers", "analysts", "business analysts"],
+            "focus": "product rollouts, adoption, and project engagement"
+          }
+        ],
+        "incoming_teams": [
+          {
+            "name": "Enterprise Business Strategy Team",
+            "function": "intake and overarching enterprise AI strategy",
+            "timeline": "joining in next few weeks",
+            "composition": "non-engineers"
+          }
+        ]
+      },
+      "key_responsibilities": [
+        "Leading AI Center of Excellence",
+        "Managing multiple engineering teams across different pillars",
+        "AI gateway architecture design and implementation",
+        "AI platform strategy and roadmap",
+        "Vendor evaluation and procurement",
+        "Team development and mentorship",
+        "TECDP program oversight",
+        "Budget management for team training and development",
+        "H1B visa employee management",
+        "Stakeholder communication with C-suite executives"
+      ],
+      "direct_reports": {
+        "team_members": [
+          "Rama Lingamgunta",
+          "Sarah Ahmed",
+          "David Hardage",
+          "Dhana Mattaparti",
+          "Vignesh Shankaradevan",
+          "Sourav Pal"
+        ],
+        "tecdp_associates": [
+          "Anugraha Awasthi",
+          "Megan Sanford",
+          "Yahia Alqurnawi",
+          "Justin Choi",
+          "Ary Marwaha",
+          "Arjun Khetan",
+          "Declan Ortinau",
+          "Noah Wasserbeck",
+          "Jack Fiengo",
+          "Abrielle Kataria",
+          "Mikkel Folling",
+          "Alex Gornovoi",
+          "Gabe Ilano",
+          "Jack Mayrides",
+          "Peter Mousses",
+          "Alexis Powell",
+          "Shifa Saidat",
+          "Taman Truong"
+        ],
+        "team_size": "large organization spanning platform and innovation pillar"
+      },
+      "job_search_history": [
+        {
+          "date": "2024-07-22",
+          "position": "Software Engineering Manager",
+          "company": "Amazon",
+          "recruiter": "Adam Choinski",
+          "status": "contacted_by_recruiter",
+          "notes": "User expressed interest, mentioned work with LLMs for graph generation"
+        }
+      ],
+      "career_development_focus": [
+        "Differentiating roles with AI-specific titles",
+        "Providing competitive compensation for talent retention",
+        "Creating clear career paths for IC and PL tracks",
+        "Team skill development in AI technologies"
+      ]
+    },
+    "technical_expertise": {
+      "primary_skills": {
+        "programming_languages": [
+          {
+            "language": "Python",
+            "version": "3.12",
+            "proficiency": "expert",
+            "use_cases": ["backend development", "AI/ML development", "automation"]
+          }
+        ],
+        "backend_frameworks": [
+          {
+            "name": "FastAPI",
+            "proficiency": "expert",
+            "use_cases": ["API development", "microservices"]
+          },
+          {
+            "name": "Pydantic",
+            "proficiency": "expert",
+            "use_cases": ["data validation", "serialization", "type safety"]
+          }
+        ],
+        "frontend_technologies": [
+          {
+            "name": "React",
+            "proficiency": "advanced",
+            "approach": "functional components with hooks"
+          },
+          {
+            "name": "Tailwind CSS",
+            "proficiency": "advanced",
+            "use_cases": ["styling", "responsive design"]
+          }
+        ],
+        "databases": [
+          {
+            "name": "PostgreSQL",
+            "proficiency": "expert",
+            "orm": "SQLAlchemy"
+          },
+          {
+            "name": "Neo4j",
+            "type": "graph_database",
+            "proficiency": "advanced",
+            "use_cases": ["knowledge graphs", "relationship modeling"]
+          },
+          {
+            "name": "Pinecone",
+            "type": "vector_database",
+            "proficiency": "advanced",
+            "use_cases": ["embeddings", "semantic search", "RAG systems"]
+          }
+        ],
+        "ai_ml_frameworks": [
+          {
+            "name": "LangChain",
+            "proficiency": "expert",
+            "use_cases": ["LLM application development", "RAG systems", "agent orchestration"]
+          },
+          {
+            "name": "LangGraph",
+            "proficiency": "expert",
+            "use_cases": ["complex LLM workflows", "agent graphs"]
+          },
+          {
+            "name": "LangSmith",
+            "proficiency": "advanced",
+            "use_cases": ["LLM observability", "monitoring", "tracing"]
+          },
+          {
+            "name": "LangFuse",
+            "proficiency": "advanced",
+            "use_cases": ["LLM observability", "monitoring"]
+          },
+          {
+            "name": "pydantic-ai",
+            "proficiency": "advanced",
+            "use_cases": ["structured AI agents"]
+          }
+        ],
+        "computer_vision": [
+          {
+            "name": "OpenCV",
+            "library": "opencv-python",
+            "proficiency": "advanced",
+            "use_cases": ["image processing", "multi-object separation"]
+          },
+          {
+            "name": "pytesseract",
+            "proficiency": "advanced",
+            "use_cases": ["OCR", "handwriting recognition"]
+          },
+          {
+            "name": "pyzbar",
+            "proficiency": "advanced",
+            "use_cases": ["QR code scanning", "barcode reading"]
+          }
+        ],
+        "llm_models": [
+          {
+            "provider": "OpenAI",
+            "models": ["GPT-4o", "GPT-4o-mini", "GPT-4-Vision"],
+            "use_cases": ["text generation", "vision tasks", "cost-effective processing"]
+          },
+          {
+            "provider": "Anthropic",
+            "models": ["Claude"],
+            "use_cases": ["conversational AI", "analysis"]
+          }
+        ],
+        "cloud_platforms": [
+          {
+            "name": "AWS",
+            "proficiency": "expert",
+            "services": ["AI/ML services", "infrastructure"]
+          },
+          {
+            "name": "Azure",
+            "proficiency": "advanced",
+            "services": ["Azure OpenAI"]
+          }
+        ],
+        "containerization": [
+          {
+            "name": "Docker",
+            "proficiency": "expert",
+            "use_cases": ["containerization", "multi-stage builds", "local development"]
+          },
+          {
+            "name": "Kubernetes",
+            "proficiency": "advanced",
+            "use_cases": ["container orchestration", "deployment", "scaling"]
+          },
+          {
+            "name": "Podman",
+            "proficiency": "advanced",
+            "use_cases": ["container orchestration", "deployment", "scaling"]
+          }
+        ]
+      },
+      "specialized_knowledge": [
+        {
+          "area": "AI Gateway Architecture",
+          "description": "Design and implementation of enterprise LLM access gateways",
+          "components": ["LLM Gateway", "MCP Gateway", "Service Gateway"]
+        },
+        {
+          "area": "Multi-Agent Systems",
+          "description": "Hierarchical agent architectures with specialized sub-agents",
+          "patterns": ["Orchestrator patterns", "agent coordination"]
+        },
+        {
+          "area": "Knowledge Management",
+          "description": "AI-powered knowledge graphs and personal knowledge systems",
+          "technologies": ["graph databases", "named entity recognition", "relationship extraction"]
+        },
+        {
+          "area": "Computer Vision for Document Processing",
+          "description": "Multi-note separation, text extraction, structure recognition",
+          "techniques": ["color-based segmentation", "dual text extraction", "confidence scoring"]
+        },
+        {
+          "area": "Prompt Engineering",
+          "description": "LLM prompt design and optimization"
+        },
+        {
+          "area": "RAG Systems",
+          "description": "Retrieval Augmented Generation architecture and implementation"
+        }
+      ],
+      "development_preferences": {
+        "code_style": "PEP 8 for Python",
+        "type_hints": "mandatory",
+        "testing": "comprehensive test suites",
+        "documentation": "comprehensive including README, QUICKSTART, PROJECT_OVERVIEW",
+        "architecture": "modular, extensible, production-ready",
+        "error_handling": "comprehensive with confidence scoring"
+      }
+    },
+    "active_projects": {
+      "memorygraph": {
+        "status": "active_development",
+        "description": "AI-powered knowledge management and personal assistant platform",
+        "initial_focus": "Rocketbook sticky notes with QR codes",
+        "technical_architecture": {
+          "data_stores": ["RDBMS", "graph database"],
+          "core_capabilities": [
+            "OCR capture from Rocketbook sticky notes",
+            "QR code processing",
+            "Named entity recognition",
+            "Triple extraction for knowledge graph",
+            "Multi-modal content capture"
+          ],
+          "agent_system": {
+            "type": "hierarchical multi-agent",
+            "agents": [
+              "Orchestrator Agent",
+              "Image Processing Agent",
+              "Separation Agent",
+              "Text Extraction Agent",
+              "Structure Recognition Agent",
+              "QR/Metadata Agent",
+              "Post-Process Agent"
+            ]
+          },
+          "content_recognition_patterns": [
+            "titles (## TITLE ##)",
+            "bulleted and numbered lists",
+            "to-do items with checkbox recognition",
+            "key-value tags (::key:value)",
+            "simple tags (@symbol)"
+          ]
+        },
+        "future_expansion": [
+          "audio capture",
+          "video capture",
+          "meeting recordings",
+          "integration with Obsidian",
+          "work and personal life management"
+        ]
+      },
+      "ai_gateway_architecture": {
+        "status": "production",
+        "description": "Enterprise AI Platform Gateway protecting and channeling access to LLMs",
+        "architecture_layers": [
+          {
+            "layer": "Core Platforms",
+            "components": ["LLM Gateway", "MCP Gateway", "Service Gateway"]
+          },
+          {
+            "layer": "Developer Workbench",
+            "components": "development tools"
+          },
+          {
+            "layer": "Reusable Capabilities",
+            "components": "shared services"
+          }
+        ],
+        "value_proposition": "Centralized cost control, security compliance, governance, and reliability while enabling rapid innovation",
+        "external_providers": ["Azure OpenAI", "AWS Bedrock"]
+      },
+      "vendor_evaluations": [
+        {
+          "vendor": "Cogniware.ai",
+          "product": "CogniDREAM",
+          "purpose": "AI cost optimization through compute optimization middleware",
+          "claimed_benefit": "50% reduction in AI spending",
+          "evaluation_status": "considering POC",
+          "concerns": [
+            "latency impacts",
+            "benchmarking validation",
+            "enterprise integration complexity"
+          ]
+        }
+      ]
+    },
+    "interests_and_knowledge_areas": {
+      "technical_interests": [
+        {
+          "topic": "AI and Machine Learning",
+          "subtopics": ["LLMs", "computer vision", "prompt engineering", "RAG systems", "multi-agent systems"],
+          "engagement_level": "expert"
+        },
+        {
+          "topic": "Knowledge Management",
+          "subtopics": ["personal knowledge graphs", "note-taking systems", "Obsidian", "Rocketbook"],
+          "engagement_level": "enthusiast"
+        },
+        {
+          "topic": "Cloud Architecture",
+          "subtopics": ["AWS", "Azure", "infrastructure optimization"],
+          "engagement_level": "expert"
+        },
+        {
+          "topic": "Hardware and Infrastructure",
+          "subtopics": ["GPU clusters", "networking cables", "fiber optics", "analog computing"],
+          "engagement_level": "curious"
+        }
+      ],
+      "scientific_interests": [
+        {
+          "topic": "Physics",
+          "subtopics": ["special relativity", "time dilation", "thermodynamics"],
+          "engagement_level": "enthusiast",
+          "example_questions": ["time dilation at light speed", "Carnot cycle principles"]
+        },
+        {
+          "topic": "Meteorology",
+          "subtopics": ["hurricanes", "Maximum Potential Intensity", "atmospheric science"],
+          "engagement_level": "enthusiast"
+        }
+      ],
+      "business_interests": [
+        {
+          "topic": "AI Industry Trends",
+          "subtopics": ["job market", "career paths", "compensation trends", "emerging roles"],
+          "context": "Relevant to team development and hiring"
+        },
+        {
+          "topic": "AI Regulation",
+          "subtopics": ["California SB53", "fine-tuning regulations", "compliance"],
+          "engagement_level": "professional"
+        },
+        {
+          "topic": "Market Dynamics",
+          "subtopics": ["tech company origins", "monopolies", "industry evolution"],
+          "examples": ["Nvidia's small cap origins", "De Beers diamond monopoly"]
+        }
+      ],
+      "personal_interests": [
+        {
+          "topic": "Sports",
+          "subtopics": ["college football"],
+          "teams_followed": ["Tennessee Volunteers"],
+          "engagement_level": "enthusiast"
+        },
+        {
+          "topic": "Movies",
+          "notes": "Likes to quote movies frequently",
+          "engagement_level": "enthusiast"
+        },
+        {
+          "topic": "Outdoor Activities",
+          "activities": ["camping", "hiking", "mountain biking", "paddleboarding"],
+          "context": "Family camping trips",
+          "engagement_level": "enthusiast"
+        }
+      ]
+    },
+    "communication_style": {
+      "professional_communication": {
+        "with_executives": {
+          "style": "concise and direct",
+          "preference": "brass tacks approach",
+          "format": "brief, actionable messages",
+          "example": "Prefers condensed messages when responding to CIO"
+        },
+        "with_team": {
+          "style": "comprehensive and detailed",
+          "focus": ["mentorship", "guidance", "development"]
+        },
+        "with_vendors": {
+          "style": "analytical and thorough",
+          "approach": "detailed technical evaluation"
+        }
+      },
+      "formatting_preferences": {
+        "emojis": "never use in professional prompts",
+        "punctuation": "never use em dashes",
+        "lists": "vary number of items by section, avoid symmetry",
+        "documentation": "comprehensive with multiple supporting files"
+      },
+      "problem_solving_approach": {
+        "style": "methodical and research-driven",
+        "pattern": "asks clarifying questions, guides toward comprehensive solutions",
+        "values": ["precision", "thoroughness", "data-driven answers"]
+      }
+    },
+    "work_culture_and_values": {
+      "leadership_style": [
+        "mentorship-focused",
+        "development-oriented",
+        "strategic thinking",
+        "innovation-driven"
+      ],
+      "team_development_priorities": [
+        "Career path clarity",
+        "Skill development in emerging AI technologies",
+        "Competitive compensation for retention",
+        "Continuous learning (provides corporate card for courses)"
+      ],
+      "organizational_values": [
+        "Quality-focused",
+        "Innovation",
+        "Strategic planning",
+        "Accountability",
+        "Collaboration"
+      ],
+      "decision_making_style": {
+        "approach": "analytical and evidence-based",
+        "process": "thorough evaluation before decisions",
+        "risk_tolerance": "calculated, prefers POC before full commitment"
+      }
+    },
+    "contextual_information": {
+      "work_challenges": [
+        {
+          "challenge": "Exponential token utilization growth",
+          "context": "Managing costs for enterprise AI solutions"
+        },
+        {
+          "challenge": "Talent competition",
+          "context": "Need for differentiated roles and competitive compensation"
+        },
+        {
+          "challenge": "H1B visa management",
+          "context": "Employee retention with visa considerations"
+        }
+      ],
+      "personal_challenges": [
+        {
+          "challenge": "Spouse's complex health issues",
+          "context": "Recurring vertigo, potential autoimmune conditions",
+          "actions_taken": ["urgent care visits", "researching conditions", "advocating with healthcare providers"]
+        },
+        {
+          "challenge": "Estranged family relationships",
+          "context": "Mother, financial securities joint ownership"
+        }
+      ],
+      "recent_learning_focus": [
+        "Advanced LLM techniques",
+        "Multi-agent systems",
+        "Cost optimization for AI workloads",
+        "Computer vision for document processing",
+        "Knowledge graph architectures"
+      ],
+      "tools_and_platforms_used": [
+        "Cursor (IDE)",
+        "Braintrust MCP server",
+        "Confluence",
+        "Jira",
+        "GitHub",
+        "AWS"
+      ]
+    },
+    "assistant_interaction_preferences": {
+      "response_style": {
+        "professional_queries": "detailed, well-structured, no emojis",
+        "technical_queries": "comprehensive with code examples",
+        "personal_queries": "empathetic but informative",
+        "research_requests": "thorough with multiple sources"
+      },
+      "preferred_output_formats": [
+        "comprehensive documentation with multiple files",
+        "production-ready code with tests",
+        "structured JSON for data",
+        "markdown for written content",
+        "React components for UI"
+      ],
+      "help_seeking_patterns": [
+        "Draft communications for executives",
+        "Research complex technical topics",
+        "Evaluate vendors and technologies",
+        "Create comprehensive documentation",
+        "Develop career frameworks",
+        "Medical information for family health issues",
+        "Code generation for AI projects"
+      ]
+    },
+    "notable_conversation_patterns": {
+      "follows_up_for_precision": true,
+      "provides_context_generously": true,
+      "values_thoroughness": true,
+      "appreciates_structured_outputs": true,
+      "seeks_actionable_recommendations": true,
+      "balances_professional_and_personal": true
+    }
+  }
