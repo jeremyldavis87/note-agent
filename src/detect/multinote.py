@@ -281,6 +281,53 @@ def _merge_overlapping_regions(regions: List[Region], iou_threshold: float = 0.5
     return merged
 
 
+def _remove_encompassed_regions(regions: List[Region]) -> List[Region]:
+    """
+    Remove regions that are completely contained within other regions.
+    
+    A region is considered encompassed if it is completely inside another region
+    (with some small margin for error).
+    
+    Args:
+        regions: List of Region objects
+        
+    Returns:
+        List of regions with encompassed ones removed
+    """
+    if len(regions) <= 1:
+        return regions
+    
+    filtered = []
+    
+    for i, region1 in enumerate(regions):
+        is_encompassed = False
+        x1, y1, w1, h1 = region1.bbox
+        area1 = w1 * h1
+        
+        for j, region2 in enumerate(regions):
+            if i == j:
+                continue
+            
+            x2, y2, w2, h2 = region2.bbox
+            area2 = w2 * h2
+            
+            # Only check if region1 is significantly smaller than region2
+            if area1 < area2 * 0.7:  # region1 is at least 30% smaller
+                # Check if region1 is contained within region2 (with 10 pixel margin)
+                margin = 10
+                if (x1 >= x2 - margin and 
+                    y1 >= y2 - margin and 
+                    x1 + w1 <= x2 + w2 + margin and 
+                    y1 + h1 <= y2 + h2 + margin):
+                    is_encompassed = True
+                    break
+        
+        if not is_encompassed:
+            filtered.append(region1)
+    
+    return filtered
+
+
 def detect_notes_by_text_regions(bgr: np.ndarray) -> List[Region]:
     """
     Detect white/light notes by finding text-rich regions.
@@ -666,8 +713,19 @@ def detect_sticky_notes(bgr: np.ndarray) -> List[Region]:
     # Deduplicate overlapping regions
     merged_regions = _merge_overlapping_regions(all_regions, iou_threshold=0.5)
     
-    # Filter out any remaining large regions (> 50% of image width or height)
-    merged_regions = _filter_large_regions(merged_regions, (h, w), max_width_ratio=0.5, max_height_ratio=0.5, max_area_ratio=0.2)
+    # Remove regions that are completely encompassed by other regions
+    merged_regions = _remove_encompassed_regions(merged_regions)
+    
+    # Filter out any remaining large regions (> 40% of image width or height)
+    merged_regions = _filter_large_regions(merged_regions, (h, w), max_width_ratio=0.4, max_height_ratio=0.4, max_area_ratio=0.15)
+    
+    # Filter out very small regions (likely noise or partial detections)
+    # Calculate median area of remaining regions
+    if len(merged_regions) > 0:
+        areas = [r.bbox[2] * r.bbox[3] for r in merged_regions]
+        median_area = np.median(areas)
+        # Remove regions that are less than 20% of median area
+        merged_regions = [r for r in merged_regions if r.bbox[2] * r.bbox[3] >= median_area * 0.2]
     
     # If we found some regions but not many, check if grid pattern is expected
     # and supplement with grid split if needed
@@ -688,15 +746,18 @@ def detect_sticky_notes(bgr: np.ndarray) -> List[Region]:
         # Merge again after adding grid regions
         merged_regions = _merge_overlapping_regions(merged_regions, iou_threshold=0.3)
         
+        # Remove encompassed regions again
+        merged_regions = _remove_encompassed_regions(merged_regions)
+        
         # Filter again after grid supplementation
-        merged_regions = _filter_large_regions(merged_regions, (h, w), max_width_ratio=0.5, max_height_ratio=0.5, max_area_ratio=0.2)
+        merged_regions = _filter_large_regions(merged_regions, (h, w), max_width_ratio=0.4, max_height_ratio=0.4, max_area_ratio=0.15)
     
     # If we didn't find any notes, fall back to grid split
     if len(merged_regions) == 0:
         return split_three_by_three(bgr)
     
     # Final filter to remove any regions that are clearly too large
-    merged_regions = _filter_large_regions(merged_regions, (h, w), max_width_ratio=0.5, max_height_ratio=0.5, max_area_ratio=0.2)
+    merged_regions = _filter_large_regions(merged_regions, (h, w), max_width_ratio=0.4, max_height_ratio=0.4, max_area_ratio=0.15)
     
     # Assign unique position labels based on spatial ordering
     merged_regions = _assign_unique_position_labels(merged_regions, (h, w))
