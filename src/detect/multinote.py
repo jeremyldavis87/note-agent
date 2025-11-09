@@ -209,7 +209,7 @@ def _merge_overlapping_regions(regions: List[Region], iou_threshold: float = 0.5
     """
     Merge overlapping regions based on IoU threshold.
     
-    Improved to prefer smaller, more note-like regions and handle containment cases.
+    Prefers regions that are closest to typical sticky note size (around 5-7% of image area).
     
     Args:
         regions: List of Region objects
@@ -221,9 +221,14 @@ def _merge_overlapping_regions(regions: List[Region], iou_threshold: float = 0.5
     if len(regions) <= 1:
         return regions
     
-    # Calculate median area for size-based preference
+    # Calculate expected note size
+    # For a 3x3 grid of 820x820 notes in a ~3000x2700 image, each note is ~8.2% of image area
     areas = [r.bbox[2] * r.bbox[3] for r in regions]
-    median_area = np.median(areas) if areas else 0
+    if not areas:
+        return regions
+    
+    # Target area for sticky notes (820x820 = 672,400 pixels)
+    target_area = 672400  # 820 * 820
     
     merged = []
     used = set()
@@ -245,33 +250,10 @@ def _merge_overlapping_regions(regions: List[Region], iou_threshold: float = 0.5
         
         # Merge overlapping regions
         if len(overlapping) > 1:
-            # Check for containment: if small region is contained in large, prefer small
-            contained_pairs = []
-            for r1 in overlapping:
-                for r2 in overlapping:
-                    if r1 != r2:
-                        area1 = r1.bbox[2] * r1.bbox[3]
-                        area2 = r2.bbox[2] * r2.bbox[3]
-                        # If r1 is much smaller and contained in r2, prefer r1
-                        if area1 < area2 * 0.5 and _is_contained(r1.bbox, r2.bbox):
-                            contained_pairs.append((r1, r2))
-            
-            # If we found containment, keep the smaller contained regions
-            if contained_pairs:
-                # Keep all small contained regions, exclude large containers
-                large_containers = {pair[1] for pair in contained_pairs}
-                preferred = [r for r in overlapping if r not in large_containers]
-                if preferred:
-                    # Among preferred, choose one closest to median size
-                    preferred.sort(
-                        key=lambda r: abs((r.bbox[2] * r.bbox[3]) - median_area)
-                    )
-                    merged.append(preferred[0])
-                    continue
-            
-            # No containment: prefer region closest to median size
+            # Prefer region closest to target note size
+            # This favors edge-detected regions with borders over smaller text-only regions
             overlapping.sort(
-                key=lambda r: abs((r.bbox[2] * r.bbox[3]) - median_area)
+                key=lambda r: abs((r.bbox[2] * r.bbox[3]) - target_area)
             )
             merged.append(overlapping[0])
         else:
@@ -582,15 +564,25 @@ def detect_notes_by_edges(bgr: np.ndarray) -> List[Region]:
         # Detect note color
         note_color = detect_note_color(region_img)
         
+        # Expand bounding box to include the colored border
+        # Edge detection finds the inner boundary (content area), so expand outward
+        # Calculate padding to target final size of ~820x820 pixels
+        # Average detected content is ~670x680, so we need ~75 pixels per side
+        border_padding = 72
+        x_expanded = max(0, x - border_padding)
+        y_expanded = max(0, y - border_padding)
+        w_expanded = min(w - x_expanded, w_box + 2 * border_padding)
+        h_expanded = min(h - y_expanded, h_box + 2 * border_padding)
+        
         # Calculate position label based on grid position (for compatibility)
-        row = int((y + h_box // 2) / (h / 3)) + 1
-        col = int((x + w_box // 2) / (w / 3)) + 1
+        row = int((y_expanded + h_expanded // 2) / (h / 3)) + 1
+        col = int((x_expanded + w_expanded // 2) / (w / 3)) + 1
         row = max(1, min(3, row))
         col = max(1, min(3, col))
         position_label = f"row_{row}_col_{col}"
         
         regions.append(Region(
-            bbox=(x, y, w_box, h_box),
+            bbox=(x_expanded, y_expanded, w_expanded, h_expanded),
             position_label=position_label,
             note_color=note_color
         ))
@@ -710,6 +702,10 @@ def detect_sticky_notes(bgr: np.ndarray) -> List[Region]:
     # Combine and merge results
     all_regions = edge_regions + text_regions + color_regions
     
+    # Filter out obviously oversized regions BEFORE merging to prevent contamination
+    # Use more permissive thresholds than final filtering
+    all_regions = _filter_large_regions(all_regions, (h, w), max_width_ratio=0.45, max_height_ratio=0.50, max_area_ratio=0.13)
+    
     # Deduplicate overlapping regions
     merged_regions = _merge_overlapping_regions(all_regions, iou_threshold=0.5)
     
@@ -717,7 +713,7 @@ def detect_sticky_notes(bgr: np.ndarray) -> List[Region]:
     merged_regions = _remove_encompassed_regions(merged_regions)
     
     # Filter out any remaining large regions (> 40% of image width or height)
-    merged_regions = _filter_large_regions(merged_regions, (h, w), max_width_ratio=0.4, max_height_ratio=0.4, max_area_ratio=0.15)
+    merged_regions = _filter_large_regions(merged_regions, (h, w), max_width_ratio=0.40, max_height_ratio=0.40, max_area_ratio=0.10)
     
     # Filter out very small regions (likely noise or partial detections)
     # Calculate median area of remaining regions
@@ -750,14 +746,14 @@ def detect_sticky_notes(bgr: np.ndarray) -> List[Region]:
         merged_regions = _remove_encompassed_regions(merged_regions)
         
         # Filter again after grid supplementation
-        merged_regions = _filter_large_regions(merged_regions, (h, w), max_width_ratio=0.4, max_height_ratio=0.4, max_area_ratio=0.15)
+        merged_regions = _filter_large_regions(merged_regions, (h, w), max_width_ratio=0.40, max_height_ratio=0.40, max_area_ratio=0.10)
     
     # If we didn't find any notes, fall back to grid split
     if len(merged_regions) == 0:
         return split_three_by_three(bgr)
     
     # Final filter to remove any regions that are clearly too large
-    merged_regions = _filter_large_regions(merged_regions, (h, w), max_width_ratio=0.4, max_height_ratio=0.4, max_area_ratio=0.15)
+    merged_regions = _filter_large_regions(merged_regions, (h, w), max_width_ratio=0.40, max_height_ratio=0.40, max_area_ratio=0.10)
     
     # Assign unique position labels based on spatial ordering
     merged_regions = _assign_unique_position_labels(merged_regions, (h, w))
