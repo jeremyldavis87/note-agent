@@ -205,15 +205,16 @@ def _assign_unique_position_labels(regions: List[Region], image_shape: Tuple[int
     return sorted_regions
 
 
-def _merge_overlapping_regions(regions: List[Region], iou_threshold: float = 0.5) -> List[Region]:
+def _merge_overlapping_regions(regions: List[Region], iou_threshold: float = 0.5, image_shape: tuple = None) -> List[Region]:
     """
     Merge overlapping regions based on IoU threshold.
     
-    Prefers regions that are closest to typical sticky note size (around 5-7% of image area).
+    Prefers regions that are closest to typical sticky note size (around 8-10% of image area).
     
     Args:
         regions: List of Region objects
         iou_threshold: IoU threshold above which regions are merged
+        image_shape: Tuple of (height, width) for calculating target size
         
     Returns:
         List of merged/deduplicated regions
@@ -221,14 +222,21 @@ def _merge_overlapping_regions(regions: List[Region], iou_threshold: float = 0.5
     if len(regions) <= 1:
         return regions
     
-    # Calculate expected note size
-    # For a 3x3 grid of 820x820 notes in a ~3000x2700 image, each note is ~8.2% of image area
+    # Calculate expected note size based on image dimensions
+    # For a 3x3 grid, each note is roughly 1/9 of image area (11.1%)
+    # But accounting for margins/spacing, notes are typically 8-10% of image
     areas = [r.bbox[2] * r.bbox[3] for r in regions]
     if not areas:
         return regions
     
-    # Target area for sticky notes (820x820 = 672,400 pixels)
-    target_area = 672400  # 820 * 820
+    if image_shape:
+        h, w = image_shape
+        image_area = h * w
+        # Target: 9% of image area (between 1/12 and 1/9)
+        target_area = image_area * 0.09
+    else:
+        # Fallback: use median area
+        target_area = np.median(areas)
     
     merged = []
     used = set()
@@ -566,9 +574,9 @@ def detect_notes_by_edges(bgr: np.ndarray) -> List[Region]:
         
         # Expand bounding box to include the colored border
         # Edge detection finds the inner boundary (content area), so expand outward
-        # Calculate padding to target final size of ~820x820 pixels
-        # Average detected content is ~670x680, so we need ~75 pixels per side
-        border_padding = 72
+        # Calculate adaptive padding based on detected region size
+        # Border is typically 9-11% of note dimension
+        border_padding = int(min(w_box, h_box) * 0.10)
         x_expanded = max(0, x - border_padding)
         y_expanded = max(0, y - border_padding)
         w_expanded = min(w - x_expanded, w_box + 2 * border_padding)
@@ -707,7 +715,7 @@ def detect_sticky_notes(bgr: np.ndarray) -> List[Region]:
     all_regions = _filter_large_regions(all_regions, (h, w), max_width_ratio=0.45, max_height_ratio=0.50, max_area_ratio=0.13)
     
     # Deduplicate overlapping regions
-    merged_regions = _merge_overlapping_regions(all_regions, iou_threshold=0.5)
+    merged_regions = _merge_overlapping_regions(all_regions, iou_threshold=0.5, image_shape=(h, w))
     
     # Remove regions that are completely encompassed by other regions
     merged_regions = _remove_encompassed_regions(merged_regions)
@@ -720,8 +728,19 @@ def detect_sticky_notes(bgr: np.ndarray) -> List[Region]:
     if len(merged_regions) > 0:
         areas = [r.bbox[2] * r.bbox[3] for r in merged_regions]
         median_area = np.median(areas)
-        # Remove regions that are less than 20% of median area
-        merged_regions = [r for r in merged_regions if r.bbox[2] * r.bbox[3] >= median_area * 0.2]
+        # Remove regions that are less than 50% of median area (more aggressive)
+        # This helps eliminate partial detections and noise
+        merged_regions = [r for r in merged_regions if r.bbox[2] * r.bbox[3] >= median_area * 0.50]
+    
+    # Filter out regions with bad aspect ratios (too elongated)
+    # Sticky notes should be roughly square (aspect ratio between 0.7 and 1.4)
+    filtered_by_aspect = []
+    for r in merged_regions:
+        w_box, h_box = r.bbox[2], r.bbox[3]
+        aspect = w_box / max(h_box, 1)
+        if 0.7 <= aspect <= 1.4:  # Roughly square
+            filtered_by_aspect.append(r)
+    merged_regions = filtered_by_aspect if filtered_by_aspect else merged_regions
     
     # If we found some regions but not many, check if grid pattern is expected
     # and supplement with grid split if needed
@@ -740,7 +759,7 @@ def detect_sticky_notes(bgr: np.ndarray) -> List[Region]:
                 merged_regions.append(grid_region)
         
         # Merge again after adding grid regions
-        merged_regions = _merge_overlapping_regions(merged_regions, iou_threshold=0.3)
+        merged_regions = _merge_overlapping_regions(merged_regions, iou_threshold=0.3, image_shape=(h, w))
         
         # Remove encompassed regions again
         merged_regions = _remove_encompassed_regions(merged_regions)
