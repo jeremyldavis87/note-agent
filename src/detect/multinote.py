@@ -1008,9 +1008,26 @@ def detect_regions(image: np.ndarray, force_single: bool = False) -> List[Region
         return [Region(bbox=(0, 0, w, h), position_label="row_1_col_1")]
     
     h, w = image.shape[:2]
+    image_area = h * w
     
     # Try to detect sticky notes first (for grid layouts)
     sticky_notes = detect_sticky_notes(image)
+    
+    # Check if we detected many small regions (indicates full-page notebook, not sticky notes)
+    # This happens when text-based detection finds many small text fragments
+    if len(sticky_notes) > 15:
+        # Calculate average region size
+        avg_region_area = sum(r.bbox[2] * r.bbox[3] for r in sticky_notes) / len(sticky_notes)
+        avg_region_ratio = avg_region_area / image_area
+        
+        # If average region is very small (< 2% of image), likely fragments, not notes
+        if avg_region_ratio < 0.02:
+            # This is likely a full-page notebook, try section detection instead
+            sections = detect_page_sections(image)
+            if len(sections) > 1:
+                return sections
+            # If section detection fails, process as single page
+            return [Region(bbox=(0, 0, w, h), position_label="row_1_col_1")]
     
     # If we detected multiple regions (more than 1), use sticky note detection
     if len(sticky_notes) > 1:

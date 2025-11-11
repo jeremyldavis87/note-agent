@@ -1,0 +1,91 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# Logs
+logs/
+*.log
+streamlit.log
+
+# Test files
+test/
+tests/
+*.test.py
+test_*.py
+
+# Documentation
+docs/
+*.md
+!README.md
+
+# Environment files (secrets should not be in image)
+.env
+.env.local
+.env.*.local
+
+# Terraform
+terraform/
+*.tfstate
+*.tfstate.backup
+.terraform/
+*.tfvars
+
+# GitHub
+.github/
+
+# CI/CD
+.gitlab-ci.yml
+.travis.yml
+Jenkinsfile
+
+# Docker
+Dockerfile*
+docker-compose*.yml
+.dockerignore
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Scripts (deployment scripts not needed in container)
+scripts/
+
+# Output files
+output*.json
+actual-output*.json
+expected-output*.json
+aggregated-output.json
+

@@ -1,0 +1,33 @@
+# AWS Configuration
+aws_region = "us-east-1"
+environment = "dev"
+project_name = "note-agent"
+
+# Network Configuration
+vpc_cidr = "10.0.0.0/16"
+availability_zones = ["us-east-1a", "us-east-1b"]
+
+# ECS Configuration
+ecs_task_cpu = 2048
+ecs_task_memory = 4096
+ecs_desired_count = 1
+ecs_min_capacity = 1
+ecs_max_capacity = 5
+
+# Application Configuration
+container_port = 8000
+health_check_path = "/api/v1/health"
+
+# API Keys (REQUIRED - Replace with your actual keys)
+openai_api_key = "YOUR_OPENAI_API_KEY_HERE"
+anthropic_api_key = "YOUR_ANTHROPIC_API_KEY_HERE"
+braintrust_api_key = ""  # Optional
+
+# AI Model Configuration
+text_ai_model = "gpt-4o-mini"
+agent_vision_model = "gpt-4o-mini"
+
+# Application Settings
+log_level = "INFO"
+debug = false
+

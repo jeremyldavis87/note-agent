@@ -1,0 +1,312 @@
+{
+  "image_metadata": {
+    "total_pages": 2,
+    "date": "10/22/2025",
+    "notebook_brand": "Rocketbook",
+    "detection_method": "grid_heuristic"
+  },
+  "pages": [
+    {
+      "page_number": 1,
+      "title": "Daily Notes: 10/22/2025",
+      "qr_code_present": true,
+      "qr_code_position": "bottom_left",
+      "sections": [
+        {
+          "section_title": "Daily Notes: 10/22/2025",
+          "raw_text": "## Daily Notes: 10/22/2025 ##",
+          "action_items": [],
+          "tags": [
+            "daily-notes"
+          ],
+          "checkboxes": 0
+        },
+        {
+          "section_title": "Clint Yon-1",
+          "raw_text": "Clint Yon-1\n\u2022 WWT discussion\n\u2022 Steps forward\n\u2022 Rationalization\n\u2022 Coding assistant operating model\n\u2610 Formalize variables + thoughts around neo-cloud, bare metal, hyperscaler",
+          "action_items": [
+            "Discuss WWT",
+            "Determine steps forward",
+            "Address rationalization",
+            "Define coding assistant operating model",
+            "Formalize variables and thoughts around neo-cloud, bare metal, hyperscaler"
+          ],
+          "tags": [
+            "WWT",
+            "clint-yon",
+            "operating-model",
+            "bare-metal",
+            "coding-assistant",
+            "hyperscaler",
+            "neo-cloud",
+            "wwt",
+            "rationalization"
+          ],
+          "checkboxes": 1
+        },
+        {
+          "section_title": "Alex Gornevski: 1-on-1",
+          "raw_text": "Alex Gornevski: 1-on-1\n\u2022 Ready to ship innovation\n\u2022 Looking at NZR effort w/ Tyler\n  \u2192 Triples\n\u2022 Working to motivate himself",
+          "action_items": [
+            "Ship innovation",
+            "Review NZR effort with Tyler",
+            "Follow up on Triples",
+            "Support motivation efforts"
+          ],
+          "tags": [
+            "alex-gornevski",
+            "nzr",
+            "tyler",
+            "one-on-one",
+            "innovation",
+            "motivation",
+            "1-on-1",
+            "triples"
+          ],
+          "checkboxes": 0
+        },
+        {
+          "section_title": "Product Research",
+          "raw_text": "Product Research\n\u2022 HeyGen/Synthesia\n\u2022 ElevenLabs",
+          "action_items": [
+            "Research HeyGen/Synthesia",
+            "Research ElevenLabs"
+          ],
+          "tags": [
+            "elevenlabs",
+            "product-research",
+            "heygen",
+            "synthesia"
+          ],
+          "checkboxes": 0
+        },
+        {
+          "section_title": "To Do",
+          "raw_text": "To Do\n\u2610 MacBooks for HIH\n\u2610 AI Job Family roles\n\u2610 Patient Experience Ideation\n\u2610 Client ELGAI Ideation\n\u2610 Vendor connects - NotDiamond, SnowGlobe, Tiny Fish, Rasterio\n\u2610 Strategic Plan w/ Anthropic\n\u2610 LiteLLM\n\u2610 Schedule techteam touchpoints\n\u2610 Contact Swish.ai\n\u2610 Chargebacks - AI Gateway cost model (i.e. fixed vs variable)\n\u2610 Set up time w/ Jennifer Chen\n\u2610 Review guardrails",
+          "action_items": [
+            "MacBooks for HIH",
+            "AI Job Family roles",
+            "Patient Experience Ideation",
+            "Client ELGAI Ideation",
+            "Vendor connects - NotDiamond, SnowGlobe, Tiny Fish, Rasterio",
+            "Strategic Plan w/ Anthropic",
+            "LiteLLM",
+            "Schedule techteam touchpoints",
+            "Contact Swish.ai",
+            "Chargebacks - AI Gateway cost model (i.e. fixed vs variable)",
+            "Set up time w/ Jennifer Chen",
+            "Review guardrails",
+            "Get MacBooks for HIH",
+            "Define AI Job Family roles",
+            "Conduct Patient Experience Ideation",
+            "Conduct Client ELGAI Ideation",
+            "Connect with vendors - NotDiamond, SnowGlobe, Tiny Fish, Rasterio",
+            "Develop Strategic Plan with Anthropic",
+            "Set up LiteLLM",
+            "Schedule tech team touchpoints",
+            "Address chargebacks - AI Gateway cost model (i.e. fixed vs variable)",
+            "Set up time with Jennifer Chen"
+          ],
+          "tags": [
+            "litellm",
+            "patient-experience",
+            "infrastructure",
+            "equipment",
+            "vendors",
+            "techteam",
+            "roles",
+            "ai-job-family",
+            "cost-model",
+            "strategic-planning",
+            "swish-ai",
+            "todo",
+            "meetings",
+            "chargebacks",
+            "rasterio",
+            "tiny-fish",
+            "finance",
+            "client",
+            "elgai",
+            "macbooks",
+            "ideation",
+            "guardrails",
+            "anthropic",
+            "compliance",
+            "hih",
+            "jennifer-chen",
+            "snowglobe",
+            "ai-gateway",
+            "scheduling",
+            "hr",
+            "notdiamond"
+          ],
+          "checkboxes": 12
+        }
+      ]
+    },
+    {
+      "page_number": 2,
+      "title": null,
+      "qr_code_present": true,
+      "qr_code_position": "bottom_right",
+      "sections": [
+        {
+          "section_title": "Mukesh",
+          "raw_text": "Mukesh\n\u2022 Langsmith\n  \u21aa Visibility\n  \u21aa PII/PHI - No way to de-identify\n\u2022 GPU Hardware",
+          "action_items": [
+            "Review Langsmith visibility",
+            "Address PII/PHI de-identification in Langsmith",
+            "Review GPU hardware"
+          ],
+          "tags": [
+            "privacy",
+            "PII",
+            "de-identify",
+            "pii",
+            "Mukesh",
+            "GPU",
+            "PHI",
+            "gpu",
+            "Langsmith",
+            "visibility",
+            "hardware",
+            "phi",
+            "security",
+            "langsmith"
+          ],
+          "checkboxes": 0
+        },
+        {
+          "section_title": "Alexis Powell /con-l",
+          "raw_text": "Alexis Powell /con-l\n\u2022 Guardian AI\n\u2022 Unstructured.io - has been a little frustrating\n\u2022 Likes working w/ Sarah\n\u2022 Likes spicy food\n\u2022 Advisor - Praveena Avaluru - Mentor Qlic - Goal setting\n\nFollow up next week on goals",
+          "action_items": [
+            "Follow up next week on goals"
+          ],
+          "tags": [
+            "unstructured-io",
+            "Sarah",
+            "guardian-ai",
+            "goal-setting",
+            "praveena-avaluru",
+            "Guardian AI",
+            "mentor-qlic",
+            "Alexis Powell",
+            "spicy-food",
+            "goal setting",
+            "Mentor Qlic",
+            "sarah",
+            "Praveena Avaluru",
+            "Unstructured.io"
+          ],
+          "checkboxes": 0
+        },
+        {
+          "section_title": "Azure OpenAI Proposal",
+          "raw_text": "Azure OpenAI Proposal\n\u2022 Attendees\n  \u21aa Erik Golden    \u21aa Heather Allor    \u21aa Divyaul Pandle\n  \u21aa Patti Lukaszewicz    \u21aa Curtis Romboli\n  \u21aa Will Redaers    \u21aa Mukesh Pandey",
+          "action_items": [],
+          "tags": [
+            "azure",
+            "meeting",
+            "proposal",
+            "Patti Lukaszewicz",
+            "Mukesh Pandey",
+            "Heather Allor",
+            "openai",
+            "Divyaul Pandle",
+            "Azure OpenAI",
+            "Curtis Romboli",
+            "Will Redaers",
+            "Erik Golden"
+          ],
+          "checkboxes": 0
+        },
+        {
+          "section_title": "CGT Nav!",
+          "raw_text": "CGT Nav!\n\u2022 Jira API access\n\u2022 Dogma OOD conflict \u279e\n\u2022 Ajoz for approval\n\u2022 AZ11345\n\n\u21aa Bradley Wyckhouse\n\u2022 Alison Craig\n\u21aa GeneSh",
+          "action_items": [
+            "Set up Jira API access",
+            "Resolve Dogma OOD conflict",
+            "Get approval from Ajoz",
+            "Follow up on AZ11345",
+            "Contact Bradley Wyckhouse",
+            "Contact Alison Craig",
+            "Contact GeneSh"
+          ],
+          "tags": [
+            "CGT Nav",
+            "nav",
+            "Dogma",
+            "api",
+            "approval",
+            "Jira",
+            "GeneSh",
+            "dogma",
+            "cgt",
+            "Bradley Wyckhouse",
+            "jira",
+            "ood",
+            "AZ11345",
+            "Alison Craig"
+          ],
+          "checkboxes": 0
+        },
+        {
+          "section_title": "Platform Priorities",
+          "raw_text": "Platform Priorities\n\u2022 I/I Readiness\n\u2022 LiteLLM\n\u2022 Web Apps\n\u2022 MCP Gateway\n\u2022 AgentCore Enablement + Agentic Framework (Formulary\n\u2022 Utilization & Projections\n\u2022 Fine-tuning & SLM enablement\n\u2022 Sagemaker for data scientists\n\u2022 News aggregation & distribution\n\u2022 Prompt management - pull out of code\n\u2022 Model routing",
+          "action_items": [
+            "Complete I/I Readiness",
+            "Implement LiteLLM",
+            "Develop Web Apps",
+            "Set up MCP Gateway",
+            "Enable AgentCore and Agentic Framework (Formulary)",
+            "Track Utilization and Projections",
+            "Enable Fine-tuning and SLM",
+            "Set up Sagemaker for data scientists",
+            "Implement News aggregation and distribution",
+            "Pull Prompt management out of code",
+            "Configure Model routing"
+          ],
+          "tags": [
+            "litellm",
+            "formulary",
+            "MCP Gateway",
+            "prompt management",
+            "sagemaker",
+            "Sagemaker",
+            "model routing",
+            "platform",
+            "projections",
+            "fine-tuning",
+            "utilization",
+            "news-aggregation",
+            "SLM",
+            "agentcore",
+            "slm",
+            "model-routing",
+            "LiteLLM",
+            "priorities",
+            "readiness",
+            "Agentic Framework",
+            "mcp-gateway",
+            "data-science",
+            "web-apps",
+            "agentic-framework",
+            "prompt-management",
+            "Web Apps",
+            "AgentCore",
+            "Formulary"
+          ],
+          "checkboxes": 0
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "total_sections": 10,
+    "total_action_items": 55,
+    "total_checkboxes": 13,
+    "main_themes": [],
+    "key_people_mentioned": [],
+    "key_vendors_products": []
+  }
+}

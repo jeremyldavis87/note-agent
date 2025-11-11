@@ -51,6 +51,17 @@ class Settings:
     UPLOAD_DIR: str
     MAX_FILE_SIZE: int
 
+    # AWS
+    AWS_REGION: str
+    AWS_ACCOUNT_ID: Optional[str]
+    AWS_ACCESS_KEY_ID: Optional[str]
+    AWS_SECRET_ACCESS_KEY: Optional[str]
+    AWS_S3_BUCKET: Optional[str]
+
+    # API
+    API_CACHE_SIZE: int
+    API_CACHE_TTL: int
+
     # Dev
     DEBUG: bool
     LOG_LEVEL: str
@@ -97,6 +108,13 @@ def load_settings() -> Settings:
         AGENT_ENABLE_LOCAL_LOGS=_get_bool("AGENT_ENABLE_LOCAL_LOGS", "true"),
         UPLOAD_DIR=os.getenv("UPLOAD_DIR", "./uploads"),
         MAX_FILE_SIZE=_get_int("MAX_FILE_SIZE", 10 * 1024 * 1024),
+        AWS_REGION=os.getenv("AWS_REGION", "us-east-1"),
+        AWS_ACCOUNT_ID=os.getenv("AWS_ACCOUNT_ID"),
+        AWS_ACCESS_KEY_ID=os.getenv("AWS_ACCESS_KEY_ID"),
+        AWS_SECRET_ACCESS_KEY=os.getenv("AWS_SECRET_ACCESS_KEY"),
+        AWS_S3_BUCKET=os.getenv("AWS_S3_BUCKET"),
+        API_CACHE_SIZE=_get_int("API_CACHE_SIZE", 100),
+        API_CACHE_TTL=_get_int("API_CACHE_TTL", 3600),
         DEBUG=_get_bool("DEBUG", "false"),
         LOG_LEVEL=os.getenv("LOG_LEVEL", "INFO"),
     )

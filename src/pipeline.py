@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import concurrent.futures as cf
+from concurrent.futures import as_completed
 import json
 import re
 from pathlib import Path
@@ -373,6 +374,13 @@ def _parse_vision_response(
         - qr_code_present: Boolean or None
         - qr_code_position: Position string or None
     """
+    # Handle None or empty content
+    if content is None:
+        return "", None, None, None
+    
+    if not isinstance(content, str):
+        content = str(content)
+    
     content = content.strip()
     
     # Try to parse as JSON first
@@ -413,10 +421,7 @@ def _parse_vision_response(
             qr_code_present = data.get("qr_code_present")
             qr_code_position = data.get("qr_code_position")
             
-            # Validate note_color
-            if note_color:
-                note_color = validate_note_color(note_color)
-            
+            # Note: note_color validation is done in process_region() where we have access to region_img
             return raw_text, note_color, qr_code_present, qr_code_position
     except (json.JSONDecodeError, KeyError, AttributeError) as e:
         pass
@@ -545,151 +550,335 @@ def process_image(image_path: Path, *, force_single: bool = False) -> Document:
         region = regions[idx]
         x, y, w, h = region.bbox
         
+        # Log region processing start
+        logger.info(f"Region {idx} ({region.position_label}): Starting processing - bbox=({x}, {y}, {w}, {h})")
+        
+        # Validate bbox coordinates
+        img_h, img_w = bgr.shape[:2]
+        if x < 0 or y < 0 or w <= 0 or h <= 0:
+            error_msg = f"Region {idx}: Invalid bbox coordinates: ({x}, {y}, {w}, {h})"
+            logger.error(error_msg)
+            return Note(
+                position=region.position_label,
+                note_color=None,
+                qr_code_present=None,
+                qr_code_position=None,
+                qr_code_info=None,
+                title=None,
+                header=None,
+                raw_text=f"ERROR: {error_msg}",
+                formatted_text=f"ERROR: {error_msg}",
+                action_items=[],
+                tags=[],
+                checkboxes=None,
+                confidence_score=0.0,
+                processing_method="vision_llm",
+            )
+        
+        # Clamp coordinates to image bounds
+        x = max(0, min(x, img_w - 1))
+        y = max(0, min(y, img_h - 1))
+        w = min(w, img_w - x)
+        h = min(h, img_h - y)
+        
+        if w <= 0 or h <= 0:
+            error_msg = f"Region {idx}: Clamped bbox results in zero size: ({x}, {y}, {w}, {h})"
+            logger.error(error_msg)
+            return Note(
+                position=region.position_label,
+                note_color=None,
+                qr_code_present=None,
+                qr_code_position=None,
+                qr_code_info=None,
+                title=None,
+                header=None,
+                raw_text=f"ERROR: {error_msg}",
+                formatted_text=f"ERROR: {error_msg}",
+                action_items=[],
+                tags=[],
+                checkboxes=None,
+                confidence_score=0.0,
+                processing_method="vision_llm",
+            )
+        
         # Extract region image
         region_img = bgr[y:y+h, x:x+w]
         
-        # Vision extraction
-        vision_start = time.time()
-        # Convert image to JPEG bytes
-        _, img_bytes = cv2.imencode('.jpg', region_img)
-        vision_input = VisionInput(image_bytes=img_bytes.tobytes(), instructions=vision_prompt)
-        vision_response = vision_client.generate(vision_input)
-        vision_duration = time.time() - vision_start
-        logger.debug(f"Region {idx}: vision extraction completed in {vision_duration:.3f}s, response length={len(vision_response)}")
+        # Validate extracted region is non-empty
+        if region_img.size == 0 or region_img.shape[0] == 0 or region_img.shape[1] == 0:
+            error_msg = f"Region {idx}: Extracted region image is empty - shape={region_img.shape if hasattr(region_img, 'shape') else 'N/A'}"
+            logger.error(error_msg)
+            return Note(
+                position=region.position_label,
+                note_color=None,
+                qr_code_present=None,
+                qr_code_position=None,
+                qr_code_info=None,
+                title=None,
+                header=None,
+                raw_text=f"ERROR: {error_msg}",
+                formatted_text=f"ERROR: {error_msg}",
+                action_items=[],
+                tags=[],
+                checkboxes=None,
+                confidence_score=0.0,
+                processing_method="vision_llm",
+            )
         
-        # Parse vision response
-        raw_text, note_color, llm_qr_present, llm_qr_position = _parse_vision_response(vision_response)
+        logger.debug(f"Region {idx}: Extracted region image - shape={region_img.shape}, size={region_img.size} bytes")
         
-        # Format text
-        formatted = _normalize_bullets(raw_text)
-        
-        # QR detection (programmatic)
-        qr_start = time.time()
-        prog_qr_present, prog_qr_position, prog_qr_info = detect_qr_in_region(region_img)
-        
-        # Also check if QR code from full image mapping is in this region
-        full_image_qr_info = None
-        if idx in qr_to_region_map:
-            # Use the first QR code found in this region
-            qr_data, qr_coords = qr_to_region_map[idx][0]
-            full_image_qr_info = get_qr_code_info(qr_data)
-            if not prog_qr_present:
-                # Use full image QR detection if programmatic didn't find it
-                prog_qr_present = True
-                # Calculate position relative to region
-                qr_x, qr_y, qr_w, qr_h = qr_coords
-                region_center_x = w // 2
-                region_center_y = h // 2
-                qr_rel_x = qr_x - x
-                qr_rel_y = qr_y - y
-                qr_rel_center_x = qr_rel_x + qr_w // 2
-                qr_rel_center_y = qr_rel_y + qr_h // 2
-                
-                if qr_rel_center_x < region_center_x and qr_rel_center_y > region_center_y:
-                    prog_qr_position = "bottom_left"
-                elif qr_rel_center_x >= region_center_x and qr_rel_center_y > region_center_y:
-                    prog_qr_position = "bottom_right"
-                elif qr_rel_center_x < region_center_x and qr_rel_center_y <= region_center_y:
-                    prog_qr_position = "top_left"
-                else:
-                    prog_qr_position = "top_right"
-        
-        qr_code_present = prog_qr_present or llm_qr_present
-        qr_code_position = prog_qr_position or llm_qr_position
-        qr_code_info = full_image_qr_info or prog_qr_info
-        
-        qr_duration = time.time() - qr_start
-        logger.debug(f"Region {idx}: programmatic QR detection completed in {qr_duration:.3f}s: present={prog_qr_present}, position={prog_qr_position}, info_length={len(prog_qr_info) if prog_qr_info else 0}, full_image_mapped={bool(full_image_qr_info)}")
-        
-        # Combine LLM and programmatic QR detection (prefer programmatic for presence, LLM for position)
-        if not qr_code_position and prog_qr_present:
-            qr_code_position = prog_qr_position
-        
-        # Text enrichment with context
-        enrich_start = time.time()
-        
-        # Extract relevant context for this specific text
-        abbreviations_context = ""
-        org_context = ""
-        personal_context_text = ""
-        
-        if raw_text and abbreviations_dict:
-            relevant_abbrevs = extract_relevant_abbreviations(raw_text, abbreviations_dict)
-            abbreviations_context = format_abbreviations_context(relevant_abbrevs)
-        
-        if raw_text and org_hierarchy and people_index:
-            org_terms = extract_org_context_from_text(raw_text, org_hierarchy, people_index)
-            org_context = format_org_context(org_terms)
-        
-        if raw_text and personal_context:
-            relevant_personal = extract_relevant_context_for_text(raw_text, personal_context)
-            personal_context_text = format_personal_context(relevant_personal)
-        
-        enrich_prompt = build_text_enrich_prompt(
-            abbreviations_context=abbreviations_context,
-            org_context=org_context,
-            personal_context=personal_context_text
-        )
-        
-        enrich_json = text_client.generate(
-            f"Input note text:\n\n{raw_text}\n\n{enrich_prompt}",
-            max_tokens=settings.TEXT_AI_MODEL_MAX_OUTPUT_TOKENS,
-        )
-        enrich_duration = time.time() - enrich_start
-        logger.debug(f"Region {idx}: text enrichment completed in {enrich_duration:.3f}s, output length={len(enrich_json)}")
         try:
-            enrich = json.loads(enrich_json)
-            logger.debug(f"Region {idx}: parsed enrichment, action_items={len(enrich.get('action_items', []))}, tags={len(enrich.get('tags', []))}")
-        except Exception as e:
-            logger.warning(f"Region {idx}: failed to parse enrichment JSON: {e}")
-            enrich = {"action_items": [], "tags": [], "title": None}
-        
-        # Extract title: prefer LLM-extracted title, fallback to regex for double-hash titles
-        title = enrich.get("title")
-        # Normalize title: trim whitespace and handle string "null"
-        if title:
-            title = str(title).strip() if title != "null" else None
-            if not title:  # Empty string after strip
-                title = None
-        
-        # Fallback to regex extraction for double-hash titles if LLM didn't provide one
-        if not title:
-            title = _extract_title(raw_text)
+            # Vision extraction
+            vision_start = time.time()
+            # Convert image to JPEG bytes
+            _, img_bytes = cv2.imencode('.jpg', region_img)
+            if img_bytes is None or img_bytes.size == 0:
+                raise ValueError(f"Region {idx}: Failed to encode image to JPEG")
+            
+            vision_input = VisionInput(image_bytes=img_bytes.tobytes(), instructions=vision_prompt)
+            vision_response = vision_client.generate(vision_input)
+            vision_duration = time.time() - vision_start
+            
+            # Validate vision response
+            if vision_response is None:
+                logger.warning(f"Region {idx}: Vision client returned None, using empty string")
+                vision_response = ""
+            
+            logger.debug(f"Region {idx}: vision extraction completed in {vision_duration:.3f}s, response length={len(vision_response) if vision_response else 0}")
+            
+            # Parse vision response
+            parsed_result = _parse_vision_response(vision_response)
+            if parsed_result is None or not isinstance(parsed_result, tuple) or len(parsed_result) != 4:
+                raise ValueError(f"Region {idx}: _parse_vision_response returned invalid result: {parsed_result}")
+            
+            raw_text, note_color, llm_qr_present, llm_qr_position = parsed_result
+            
+            # Validate note_color with region image
+            if note_color:
+                note_color = validate_note_color(region_img, note_color)
+            
+            # Format text
+            formatted = _normalize_bullets(raw_text)
+            
+            # QR detection (programmatic)
+            qr_start = time.time()
+            qr_result = detect_qr_in_region(region_img)
+            if qr_result is None:
+                prog_qr_present = False
+                prog_qr_position = None
+                prog_qr_info = None
+            else:
+                # qr_result is (position_string, code_data, (center_x, center_y))
+                prog_qr_position, prog_qr_info, _ = qr_result
+                prog_qr_present = True
+            
+            # Also check if QR code from full image mapping is in this region
+            full_image_qr_info = None
+            if idx in qr_to_region_map:
+                # Use the first QR code found in this region
+                qr_data, qr_coords = qr_to_region_map[idx][0]
+                # qr_data is already the decoded string, not an image region
+                full_image_qr_info = qr_data
+                if not prog_qr_present:
+                    # Use full image QR detection if programmatic didn't find it
+                    prog_qr_present = True
+                    # Calculate position relative to region
+                    qr_x, qr_y, qr_w, qr_h = qr_coords
+                    region_center_x = w // 2
+                    region_center_y = h // 2
+                    qr_rel_x = qr_x - x
+                    qr_rel_y = qr_y - y
+                    qr_rel_center_x = qr_rel_x + qr_w // 2
+                    qr_rel_center_y = qr_rel_y + qr_h // 2
+                    
+                    if qr_rel_center_x < region_center_x and qr_rel_center_y > region_center_y:
+                        prog_qr_position = "bottom_left"
+                    elif qr_rel_center_x >= region_center_x and qr_rel_center_y > region_center_y:
+                        prog_qr_position = "bottom_right"
+                    elif qr_rel_center_x < region_center_x and qr_rel_center_y <= region_center_y:
+                        prog_qr_position = "top_left"
+                    else:
+                        prog_qr_position = "top_right"
+            
+            qr_code_present = prog_qr_present or llm_qr_present
+            qr_code_position = prog_qr_position or llm_qr_position
+            qr_code_info = full_image_qr_info or prog_qr_info
+            
+            qr_duration = time.time() - qr_start
+            logger.debug(f"Region {idx}: programmatic QR detection completed in {qr_duration:.3f}s: present={prog_qr_present}, position={prog_qr_position}, info_length={len(prog_qr_info) if prog_qr_info else 0}, full_image_mapped={bool(full_image_qr_info)}")
+            
+            # Combine LLM and programmatic QR detection (prefer programmatic for presence, LLM for position)
+            if not qr_code_position and prog_qr_present:
+                qr_code_position = prog_qr_position
+            
+            # Text enrichment with context
+            enrich_start = time.time()
+            
+            # Extract relevant context for this specific text
+            abbreviations_context = ""
+            org_context = ""
+            personal_context_text = ""
+            
+            if raw_text and abbreviations_dict:
+                relevant_abbrevs = extract_relevant_abbreviations(raw_text, abbreviations_dict)
+                abbreviations_context = format_abbreviations_context(relevant_abbrevs)
+            
+            if raw_text and org_hierarchy and people_index:
+                org_terms = extract_org_context_from_text(raw_text, org_hierarchy, people_index)
+                org_context = format_org_context(org_terms)
+            
+            if raw_text and personal_context:
+                relevant_personal = extract_relevant_context_for_text(raw_text, personal_context)
+                personal_context_text = format_personal_context(relevant_personal)
+            
+            enrich_prompt = build_text_enrich_prompt(
+                abbreviations_context=abbreviations_context,
+                org_context=org_context,
+                personal_context=personal_context_text
+            )
+            
+            enrich_json = text_client.generate(
+                f"Input note text:\n\n{raw_text}\n\n{enrich_prompt}",
+                max_tokens=settings.TEXT_AI_MODEL_MAX_OUTPUT_TOKENS,
+            )
+            enrich_duration = time.time() - enrich_start
+            logger.debug(f"Region {idx}: text enrichment completed in {enrich_duration:.3f}s, output length={len(enrich_json)}")
+            try:
+                enrich = json.loads(enrich_json)
+                logger.debug(f"Region {idx}: parsed enrichment, action_items={len(enrich.get('action_items', []))}, tags={len(enrich.get('tags', []))}")
+            except Exception as e:
+                logger.warning(f"Region {idx}: failed to parse enrichment JSON: {e}")
+                enrich = {"action_items": [], "tags": [], "title": None}
+            
+            # Extract title: prefer LLM-extracted title, fallback to regex for double-hash titles
+            title = enrich.get("title")
+            # Normalize title: trim whitespace and handle string "null"
             if title:
-                logger.debug(f"Region {idx}: extracted title via regex: {title}")
-        
-        if title:
-            logger.debug(f"Region {idx}: title={title}")
+                title = str(title).strip() if title != "null" else None
+                if not title:  # Empty string after strip
+                    title = None
+            
+            # Fallback to regex extraction for double-hash titles if LLM didn't provide one
+            if not title:
+                title = _extract_title(raw_text)
+                if title:
+                    logger.debug(f"Region {idx}: extracted title via regex: {title}")
+            
+            if title:
+                logger.debug(f"Region {idx}: title={title}")
 
-        note = Note(
-            position=region.position_label,
-            note_color=note_color,
-            qr_code_present=qr_code_present,
-            qr_code_position=qr_code_position,
-            qr_code_info=qr_code_info if qr_code_info else None,
-            title=title,
-            header=None,
-            raw_text=raw_text,
-            formatted_text=formatted,
-            action_items=list(enrich.get("action_items", [])),
-            tags=list(enrich.get("tags", [])),
-            checkboxes=_count_checkboxes(raw_text) or None,
-            confidence_score=0.9,
-            processing_method="vision_llm",
-        )
+            note = Note(
+                position=region.position_label,
+                note_color=note_color,
+                qr_code_present=qr_code_present,
+                qr_code_position=qr_code_position,
+                qr_code_info=qr_code_info if qr_code_info else None,
+                title=title,
+                header=None,
+                raw_text=raw_text,
+                formatted_text=formatted,
+                action_items=list(enrich.get("action_items", [])),
+                tags=list(enrich.get("tags", [])),
+                checkboxes=_count_checkboxes(raw_text) or None,
+                confidence_score=0.9,
+                processing_method="vision_llm",
+            )
+            
+            total_duration = time.time() - start_time
+            logger.info(f"Region {idx} ({region.position_label}): Completed processing in {total_duration:.3f}s")
+            return note
         
-        total_duration = time.time() - start_time
-        logger.debug(f"Region {idx}: total processing time={total_duration:.3f}s")
-        return note
+        except Exception as e:
+            error_msg = f"Region {idx} ({region.position_label}): Processing failed - {type(e).__name__}: {str(e)}"
+            logger.error(error_msg, exc_info=True)
+            total_duration = time.time() - start_time
+            logger.error(f"Region {idx}: Failed after {total_duration:.3f}s")
+            
+            # Return error note instead of crashing
+            return Note(
+                position=region.position_label,
+                note_color=None,
+                qr_code_present=None,
+                qr_code_position=None,
+                qr_code_info=None,
+                title=None,
+                header=None,
+                raw_text=f"ERROR: {error_msg}",
+                formatted_text=f"ERROR: {error_msg}",
+                action_items=[],
+                tags=[],
+                checkboxes=None,
+                confidence_score=0.0,
+                processing_method="vision_llm",
+            )
 
     processing_start = time.time()
-    logger.debug(f"Starting parallel processing of {len(regions)} regions with max_workers={settings.AGENT_PARALLEL_PROCESSING_LIMIT}")
+    logger.info(f"Starting parallel processing of {len(regions)} regions with max_workers={settings.AGENT_PARALLEL_PROCESSING_LIMIT}")
+    
+    # Use submit + as_completed for better observability of parallel execution
+    notes_dict = {}  # Map index to note to preserve order
+    completed_count = 0
+    failed_count = 0
+    
     with cf.ThreadPoolExecutor(max_workers=settings.AGENT_PARALLEL_PROCESSING_LIMIT) as pool:
-        for note in pool.map(process_region, range(len(regions))):
-            notes.append(note)
+        # Submit all tasks
+        future_to_idx = {pool.submit(process_region, idx): idx for idx in range(len(regions))}
+        logger.debug(f"Submitted {len(future_to_idx)} region processing tasks")
+        
+        # Process results as they complete (shows parallel execution)
+        for future in as_completed(future_to_idx):
+            idx = future_to_idx[future]
+            try:
+                note = future.result()
+                notes_dict[idx] = note
+                completed_count += 1
+                # Check if this was an error note
+                if note.raw_text.startswith("ERROR:"):
+                    failed_count += 1
+                    logger.warning(f"Region {idx} ({note.position}): Processing completed with errors")
+                else:
+                    logger.debug(f"Region {idx} ({note.position}): Successfully completed (completed: {completed_count}/{len(regions)})")
+            except Exception as e:
+                failed_count += 1
+                error_msg = f"Region {idx}: Future execution failed - {type(e).__name__}: {str(e)}"
+                logger.error(error_msg, exc_info=True)
+                # Create error note
+                region = regions[idx]
+                notes_dict[idx] = Note(
+                    position=region.position_label,
+                    note_color=None,
+                    qr_code_present=None,
+                    qr_code_position=None,
+                    qr_code_info=None,
+                    title=None,
+                    header=None,
+                    raw_text=f"ERROR: {error_msg}",
+                    formatted_text=f"ERROR: {error_msg}",
+                    action_items=[],
+                    tags=[],
+                    checkboxes=None,
+                    confidence_score=0.0,
+                    processing_method="vision_llm",
+                )
+    
+    # Preserve region order by sorting by index
+    notes = [notes_dict[i] for i in sorted(notes_dict.keys())]
+    
     processing_duration = time.time() - processing_start
-    logger.debug(f"All regions processed in {processing_duration:.3f}s (parallel)")
+    success_count = completed_count - failed_count
+    logger.info(f"All regions processed in {processing_duration:.3f}s (parallel) - Success: {success_count}, Failed: {failed_count}, Total: {len(regions)}")
 
+    # Validate JSON aggregation - ensure processed notes match detected regions
+    if len(notes) != len(regions):
+        logger.warning(f"Note count mismatch: detected {len(regions)} regions but processed {len(notes)} notes")
+    else:
+        logger.debug(f"Note count validation passed: {len(notes)} notes match {len(regions)} detected regions")
+    
+    # Count successful vs failed notes
+    successful_notes = [n for n in notes if not n.raw_text.startswith("ERROR:")]
+    error_notes = [n for n in notes if n.raw_text.startswith("ERROR:")]
+    logger.info(f"Processing summary: {len(successful_notes)} successful, {len(error_notes)} failed out of {len(notes)} total notes")
+    
     # QR detection (for overall metadata) - reuse results from mapping
     all_qr_present = len(qr_full) >= len(notes)
     logger.debug(f"QR detection summary: found {len(qr_full)} QR codes, all_present={all_qr_present}")
@@ -717,6 +906,15 @@ def process_image(image_path: Path, *, force_single: bool = False) -> Document:
             notebook_brand="Rocketbook",
         ),
     )
+    
+    # Validate JSON structure can be serialized
+    try:
+        json_str = doc.model_dump_json(indent=2)
+        json.loads(json_str)  # Verify it's valid JSON
+        logger.debug(f"Document JSON validation passed: {len(json_str)} bytes, {len(notes)} notes")
+    except Exception as e:
+        logger.error(f"Document JSON serialization failed: {type(e).__name__}: {str(e)}", exc_info=True)
+        # Continue anyway - the Document object is still valid
     
     total_duration = time.time() - total_start
     logger.debug(f"Total image processing time: {total_duration:.3f}s")

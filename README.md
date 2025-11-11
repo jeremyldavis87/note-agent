@@ -1,6 +1,6 @@
-# Note Agent (Local CLI)
+# Note Agent
 
-Local tool that converts an image containing one or multiple notes into structured JSON using a vision LLM plus optional text LLM enrichment.
+A microservice that converts images containing handwritten notes into structured JSON using vision LLM and text enrichment. Available as both a local CLI tool and a containerized REST API.
 
 ## Setup
 
@@ -50,6 +50,57 @@ Flags:
 python scripts/compare_expected.py --actual out.json --expected expected-output.json
 ```
 
+## Deployment Options
+
+### Option 1: Local CLI (Development)
+
+Run locally as a command-line tool. Output is written to a JSON file.
+
+### Option 2: API Service (Production)
+
+Deploy as a containerized microservice on AWS ECS with REST API endpoints.
+
+**Quick Start:**
+```bash
+# Build Docker image
+./scripts/build-image.sh
+
+# Deploy to AWS ECS
+cd terraform
+terraform init
+terraform apply
+```
+
+**API Endpoints:**
+- `POST /api/v1/upload` - Upload and process single image
+- `POST /api/v1/upload/batch` - Process multiple images
+- `GET /api/v1/health` - Health check
+- `GET /api/v1/docs` - API documentation
+
+**Features:**
+- Synchronous processing with JSON response
+- S3 storage for uploaded images
+- In-memory caching for recent results
+- Auto-scaling based on load
+- CloudWatch logging and monitoring
+
+See [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) for complete deployment guide.
+
+## Architecture
+
+- **API Framework**: FastAPI
+- **Compute**: AWS ECS Fargate
+- **Storage**: S3 for images
+- **Registry**: ECR for Docker images
+- **Infrastructure**: Terraform
+- **CI/CD**: GitHub Actions
+
+## Documentation
+
+- [Deployment Guide](docs/DEPLOYMENT.md) - Complete deployment instructions
+- [Features](docs/FEATURES.md) - Supported features and capabilities
+- [Integration Guide](INTEGRATION_GUIDE.md) - How to integrate with other services
+
 ## Notes
-- No DB/API/UI. Output is written to a JSON file.
-- See `docs/FEATURES.md` for supported features.
+- Local CLI: No database required, output written to JSON files
+- API Service: Results returned in API response, cached in memory
